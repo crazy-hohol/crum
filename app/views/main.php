@@ -3,16 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title></title>
-    <script type="text/javascript" src="/public/js/jquery-2.0.0.js"></script>
-    <script type="text/javascript" src="/public/js/underscore.js"></script>
-    <script type="text/javascript" src="/public/js/backbone.js"></script>
-    <script type="text/javascript" src="/public/bootstrap/js"></script>
+    <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>
+    <script type="text/javascript" src="/js/underscore.js"></script>
+    <script type="text/javascript" src="/js/backbone.js"></script>
+    <script type="text/javascript" src="/js/bootstrap/js"></script>
     <!--<script type="text/javascript" src="/scripts/handlebars.js"></script>-->
 
 
-    <link type="text/css" rel="stylesheet" href="/public/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="/public/css/bootstrap-responsive.css"/>
-    <link type="text/css" rel="stylesheet" href="/public/css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/main.css"/>
 
 </head>
 <body>
