@@ -4,10 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title></title>
     <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>
+    <script type="text/javascript" src="/js/require.js"></script>
     <script type="text/javascript" src="/js/underscore.js"></script>
     <script type="text/javascript" src="/js/backbone.js"></script>
     <script type="text/javascript" src="/js/bootstrap/js"></script>
-    <!--<script type="text/javascript" src="/scripts/handlebars.js"></script>-->
+    <script type="text/javascript" src="/scripts/handlebars.js"></script>
 
 
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
