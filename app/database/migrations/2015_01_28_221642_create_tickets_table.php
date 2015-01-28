@@ -14,8 +14,13 @@ class CreateTicketsTable extends Migration {
 	{
 		Schema::create('tickets', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
 			$table->increments('id');
 			$table->timestamps();
+            $table->string('title');
+            $table->string('text');
+            $table->integer('status')->unsigned();
+            $table->integer('story')->unsigned()->nullable();
 		});
 	}
 
