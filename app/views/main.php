@@ -21,7 +21,7 @@
     <div class="row-fluid show">
         <div class="span12 show" id="top">
             <div class="span-5">
-                <button class="btn btn-large btn-info">New Ticket</button>
+                <button id="js-add-ticket" class="btn btn-large btn-info">New Ticket</button>
                 <button class="btn btn-large btn-danger delete">New Category</button>
             </div>
             <div class="span-7"></div>
@@ -38,6 +38,13 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<div id="js-add-ticket-form" style="display: none;">
+    <label for="title">Заголовок</label><input type="text" id="title" />
+    <label for="category">Категория</label><select id="category"></select>
+    <label for="text">Текст</label><textarea id="text"></textarea>
 </div>
 </body>
 </html>
