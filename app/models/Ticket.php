@@ -8,5 +8,5 @@
 
 class Ticket extends Eloquent
 {
-
+    protected $guardet = ['id'];
 } 

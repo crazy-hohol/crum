@@ -10,16 +10,37 @@ class TicketController extends BaseController
 {
     public function postAction()
     {
-
+        $ticket = Ticket::create(json_decode(Innput::all(), true));
+        $ticket->save();
+        return Response::json(['id' => $ticket->id]);
     }
 
     public function getAction()
     {
-
+        if ($id = Input::get('id')) {
+            $ticket = Ticket::find($id);
+            if (!$ticket) {
+                return Response::json([]);
+            }
+            return Response::json($ticket->toArray());
+        } else {
+            $tickets = Ticket::all();
+            return Response::json($tickets->toArray());
+        }
     }
 
     public function putAction()
     {
 
+    }
+
+    public function deleteAction()
+    {
+        $id = Input::get('id');
+        if ($ticket = Ticket::find($id)) {
+            $ticket->status = 0;
+            $ticket->save();
+            return Response::json($id);
+        }
     }
 }
