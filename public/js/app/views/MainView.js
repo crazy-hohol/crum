@@ -6,14 +6,14 @@ app.MainView = Backbone.View.extend({
         'click #js-add-ticket': 'addTicket'
     },
     initialize: function (collection) {
-        c
+
         this.collection = collection;
         this.collection.fetch();
         this.on("add", function() {
             var ticketView = new app.TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
         }, this.collection);
-        onsole.info('init');
+        console.info('init');
         this.render();
     },
     render: function () {
