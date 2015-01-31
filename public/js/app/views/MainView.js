@@ -5,8 +5,19 @@ app.MainView = Backbone.View.extend({
     events: {
         '#js-add-ticket click': 'add'
     },
+    init: function () {
+        this.collection = app.TicketsCollection(initNotes);
+        this.on("add", function() {
+            var ticketView = new app.TicketView({model: ticket});
+            this.$el.append(ticketView.render().el);
+        }, this.collection);
+        this.render();
+    },
     render: function () {
-
+        this.collection.each(function(ticket) {
+            var ticketView = new app.TicketView({model: ticket});
+            this.$el.append(ticketView.render().el);
+        }, this);
     },
     add: function() {
         $('#js-add-ticket-form').dialog({
@@ -14,7 +25,23 @@ app.MainView = Backbone.View.extend({
             resizable: false,
             width: 800,
             height: 600,
-            buttons: []
+            buttons: [
+                {
+                    text: 'Add',
+                    click: function () {
+                        this.collection.add(new app.TicketModel(
+                            {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
+                        ));
+                        $('#js-add-ticket-form').dialog('close');
+                    }
+                },
+                {
+                    text: 'Cancel',
+                    click: function () {
+                        $('#js-add-ticket-form').dialog('close');
+                    }
+                }
+            ]
         });
     }
 

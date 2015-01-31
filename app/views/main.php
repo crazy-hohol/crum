@@ -4,16 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title></title>
     <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery-ui.js"></script>
     <script type="text/javascript" src="/js/require.js"></script>
     <script type="text/javascript" src="/js/underscore.js"></script>
     <script type="text/javascript" src="/js/backbone.js"></script>
-    <script type="text/javascript" src="/js/bootstrap/js"></script>
-    <script type="text/javascript" src="/scripts/handlebars.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/handlebars.js"></script>
 
 
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+
+    <script type="text/javascript" src="/js/app/models/TicketModel.js"></script>
+    <script type="text/javascript" src="/js/app/collections/TicketsCollection.js"></script>
+    <script type="text/javascript" src="/js/app/views/TicketView.js"></script>
+    <script type="text/javascript" src="/js/app/views/MainView.js"></script>
+<!--    <script type="text/javascript" src="/js/app/"></script>-->
+    <script type="text/javascript" src="/js/app/app.js"></script>
 
 </head>
 <body>
@@ -26,15 +34,11 @@
             </div>
             <div class="span-7"></div>
             <div class="row-fluid show" id="statuses">
-                <div class="status-column">
-                    <div class="ticket"></div>
-                    <div class="ticket"></div>
-
-                </div>
-                <div class="status-column"></div>
-                <div class="status-column"></div>
-                <div class="status-column"></div>
-                <div class="status-column"></div>
+                <div class="status-column" id="status2"></div>
+                <div class="status-column" id="status3"></div>
+                <div class="status-column" id="status4"></div>
+                <div class="status-column" id="status5"></div>
+                <div class="status-column" id="status6"></div>
             </div>
         </div>
     </div>
@@ -43,8 +47,13 @@
 
 <div id="js-add-ticket-form" style="display: none;">
     <label for="title">Заголовок</label><input type="text" id="title" />
-    <label for="category">Категория</label><select id="category"></select>
+    <label for="story">Категория</label><select id="story"></select>
     <label for="text">Текст</label><textarea id="text"></textarea>
 </div>
+<script type="text/template" id="ticketTemplate">
+    <div class="ticket" id="ticket<%= id%>">
+        <span class="title"><%= title%></span>
+    </div>
+</script>
 </body>
 </html>

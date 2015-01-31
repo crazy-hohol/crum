@@ -10,9 +10,7 @@ class TicketController extends BaseController
 {
     public function postIndex()
     {
-        //die(var_dump(Input::all()));
         $ticket = Ticket::create(Input::all());
-        //$ticket->save();
         return Response::json(['id' => $ticket->id]);
     }
 
