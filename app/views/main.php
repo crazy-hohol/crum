@@ -5,7 +5,7 @@
     <title></title>
     <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>
     <script type="text/javascript" src="/js/ui/jquery-ui.js"></script>
-<!--    <script type="text/javascript" src="/js/require.js"></script>-->
+
     <script type="text/javascript" src="/js/underscore.js"></script>
     <script type="text/javascript" src="/js/backbone.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
