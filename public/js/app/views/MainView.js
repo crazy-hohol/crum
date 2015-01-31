@@ -18,7 +18,7 @@ app.MainView = Backbone.View.extend({
     },
     render: function () {
         //console.info(this.collection);
-        this.collection.each(function(ticket) {
+        this.collection.models.each(function(ticket) {
             console.info(ticket);
             var ticketView = new app.TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
