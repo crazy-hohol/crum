@@ -7,5 +7,6 @@ app.Router = Backbone.Router.extend({
 });
 
 $(document).ready(function() {
-    var mainV = new app.MainView()
+    var mainV = new app.MainView();
+    console.info('start');
 });

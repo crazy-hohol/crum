@@ -20,6 +20,7 @@ app.MainView = Backbone.View.extend({
         }, this);
     },
     add: function() {
+        console.info('add');
         $('#js-add-ticket-form').dialog({
             modal: true,
             resizable: false,
