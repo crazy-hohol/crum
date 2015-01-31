@@ -16,7 +16,7 @@ class TicketController extends BaseController
         return Response::json(['id' => $ticket->id]);
     }
 
-    public function getAction()
+    public function getIndex()
     {
         if ($id = Input::get('id')) {
             $ticket = Ticket::find($id);
@@ -30,12 +30,12 @@ class TicketController extends BaseController
         }
     }
 
-    public function putAction()
+    public function putIndex()
     {
 
     }
 
-    public function deleteAction()
+    public function deleteIndex()
     {
         $id = Input::get('id');
         if ($ticket = Ticket::find($id)) {
