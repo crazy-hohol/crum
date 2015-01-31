@@ -8,7 +8,7 @@
 
 class TicketController extends BaseController
 {
-    public function postAction()
+    public function postIndex()
     {
         $ticket = Ticket::create(json_decode(Innput::all(), true));
         $ticket->save();
