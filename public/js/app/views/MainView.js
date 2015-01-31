@@ -5,8 +5,9 @@ app.MainView = Backbone.View.extend({
     events: {
         '#js-add-ticket click': 'add'
     },
-    init: function () {
-        this.collection = app.TicketsCollection(initNotes);
+    init: function (collection) {
+        this.collection = collection;
+        this.collection.fetch();
         this.on("add", function() {
             var ticketView = new app.TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
