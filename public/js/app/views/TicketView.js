@@ -5,7 +5,7 @@ app.TicketView = Backbone.View.extend({
     template: $("#ticketTemplate").html(),
     render: function () {
         console.info(this.model);
-        console.info(this.template);
+        console.info($("#ticketTemplate").html());
         var tmpl = _.template(this.template);
         this.$el.html(tmpl(this.model.toJSON()));
     }
