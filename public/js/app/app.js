@@ -94,5 +94,5 @@ var app = app || {};
 
 $(document).ready(function() {
 
-    var mainV = new app.MainView();
+    var mainV = new app.MainView().render();
 });
