@@ -1,7 +1,7 @@
 var app = app || {};
 
 app.MainView = Backbone.View.extend({
-    el: $("#app"),
+    el: $("#main"),
     events: {
         "click #js-add-ticket": function () {
             console.info('dddd');
