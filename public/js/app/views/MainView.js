@@ -5,7 +5,7 @@ app.MainView = Backbone.View.extend({
     events: {
         "click #js-add-ticket": "addTicket"
     },
-    initialize: function (collection) {
+    initialize: function () {
 
         //this.collection = collection;
         //this.collection.fetch();
@@ -19,10 +19,10 @@ app.MainView = Backbone.View.extend({
         var ticketsList = new app.TicketsListView({collection: coll}).render();
     },
     render: function () {
-        this.collection.each(function(ticket) {
-            var ticketView = new app.TicketView({model: ticket});
-            this.$el.append(ticketView.render().el);
-        }, this);
+        //this.collection.each(function(ticket) {
+        //    var ticketView = new app.TicketView({model: ticket});
+        //    this.$el.append(ticketView.render().el);
+        //}, this);
         return this;
     },
     addTicket: function() {
