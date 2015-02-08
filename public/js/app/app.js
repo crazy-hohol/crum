@@ -78,11 +78,11 @@ var TicketModel = Backbone.Model.extend({
 });
 
 
-app.Router = Backbone.Router.extend({
-   routes: {
-
-   }
-});
+//app.Router = Backbone.Router.extend({
+//   routes: {
+//
+//   }
+//});
 
 $(document).ready(function() {
     var coll = new app.TicketsCollection();
