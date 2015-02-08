@@ -3,9 +3,8 @@ var app = app || {};
 app.MainView = Backbone.View.extend({
     el: $("#main"),
     events: {
-        "click #js-add-ticket": function () {
-            console.info('dddd');
-        }
+        "click #js-add-ticket": 'addTicket'
+
     },
     initialize: function () {
 
