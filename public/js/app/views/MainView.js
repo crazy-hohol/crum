@@ -29,6 +29,7 @@ app.MainView = Backbone.View.extend({
                 {
                     text: 'Add',
                     click: function () {
+                        console.info(self);
                         self.collection.add(new app.TicketModel(
                             {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
                         ));
