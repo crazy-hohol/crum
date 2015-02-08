@@ -95,5 +95,4 @@ var app = app || {};
 $(document).ready(function() {
     var coll = new app.TicketsCollection();
     var mainV = new app.MainView(coll);
-    console.info('start');
 });
