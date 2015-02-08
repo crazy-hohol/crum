@@ -11,7 +11,7 @@
     <script type="text/javascript" src="/js/bootstrap.js"></script>
     <script type="text/javascript" src="/js/handlebars.js"></script>
 
-
+    <link type="text/css" rel="stylesheet" href="/css/ui_themes/base/jquery-ui.css"/>
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="/css/main.css"/>
