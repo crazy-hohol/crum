@@ -8,5 +8,6 @@ app.TicketView = Backbone.View.extend({
         console.info($("#ticketTemplate").html());
         var tmpl = _.template($("#ticketTemplate").html());
         this.$el.html(tmpl(this.model.toJSON()));
+        return this;
     }
 });
