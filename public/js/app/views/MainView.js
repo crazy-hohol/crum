@@ -30,9 +30,9 @@ app.MainView = Backbone.View.extend({
                     text: 'Add',
                     click: function () {
 
-                        app.ticketsList.collection.add(new app.TicketModel(
+                        app.ticketsList.collection.create(
                             {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
-                        ));
+                        );
                         $('#js-add-ticket-form').dialog('close');
                     }
 
