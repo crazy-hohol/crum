@@ -20,6 +20,7 @@ var TicketView = Backbone.View.extend({
         console.info($("#ticketTemplate").html());
         var tmpl = _.template($("#ticketTemplate").html());
         this.$el.html(tmpl(this.model.toJSON()));
+        return this;
     }
 });
 
@@ -48,6 +49,7 @@ var MainView = Backbone.View.extend({
             var ticketView = new TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
         }, this);
+        return this;
     },
     addTicket: function() {
         console.info('add');
