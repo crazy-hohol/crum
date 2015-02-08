@@ -1,5 +1,28 @@
 //var app = app || {};
 
+var TicketModel = Backbone.Model.extend({
+    url: '/ticket'
+});
+
+
+
+var TicketsCollection = Backbone.Collection.extend({
+    model:  TicketModel,
+    url: '/ticket'
+});
+
+
+var TicketView = Backbone.View.extend({
+    tagName: "div",
+    template: $("#ticketTemplate").html(),
+    render: function () {
+        console.info(this.model);
+        console.info($("#ticketTemplate").html());
+        var tmpl = _.template($("#ticketTemplate").html());
+        this.$el.html(tmpl(this.model.toJSON()));
+    }
+});
+
 var MainView = Backbone.View.extend({
     el: $("#status2"),
     events: {
@@ -56,26 +79,9 @@ var MainView = Backbone.View.extend({
 });
 
 
-var TicketView = Backbone.View.extend({
-    tagName: "div",
-    template: $("#ticketTemplate").html(),
-    render: function () {
-        console.info(this.model);
-        console.info($("#ticketTemplate").html());
-        var tmpl = _.template($("#ticketTemplate").html());
-        this.$el.html(tmpl(this.model.toJSON()));
-    }
-});
-
-var TicketsCollection = Backbone.Collection.extend({
-    model:  TicketModel,
-    url: '/ticket'
-});
 
 
-var TicketModel = Backbone.Model.extend({
-    url: '/ticket'
-});
+
 
 
 //app.Router = Backbone.Router.extend({
