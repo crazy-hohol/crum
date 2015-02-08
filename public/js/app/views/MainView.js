@@ -35,7 +35,7 @@ app.MainView = Backbone.View.extend({
             buttons: [
                 {
                     text: 'Add',
-                    click: this.addT()
+                    click: this.addT().apply(this)
 
 
                 },
