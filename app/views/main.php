@@ -50,10 +50,10 @@
         <span class="title"><%= title%></span>
     </div>
 </script>
-<script type="text/javascript" src="/js/app/models/TicketModel.js"></script>
-<script type="text/javascript" src="/js/app/collections/TicketsCollection.js"></script>
-<script type="text/javascript" src="/js/app/views/TicketView.js"></script>
-<script type="text/javascript" src="/js/app/views/MainView.js"></script>
+<!--<script type="text/javascript" src="/js/app/models/TicketModel.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/collections/TicketsCollection.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/views/TicketView.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/views/MainView.js"></script>-->
 <!--    <script type="text/javascript" src="/js/app/"></script>-->
 <script type="text/javascript" src="/js/app/app.js"></script>
 </body>
