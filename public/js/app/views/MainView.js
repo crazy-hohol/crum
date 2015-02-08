@@ -9,7 +9,7 @@ app.MainView = Backbone.View.extend({
     initialize: function () {
 
         var coll = new app.TicketsCollection();
-        var ticketsList = new app.TicketsListView({collection: coll}).render();
+        app.ticketsList = new app.TicketsListView({collection: coll}).render();
     },
     render: function () {
         //this.collection.each(function(ticket) {
@@ -29,8 +29,8 @@ app.MainView = Backbone.View.extend({
                 {
                     text: 'Add',
                     click: function () {
-                        console.info(self);
-                        self.collection.add(new app.TicketModel(
+
+                        app.ticketsList.collection.add(new app.TicketModel(
                             {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
                         ));
                         $('#js-add-ticket-form').dialog('close');
