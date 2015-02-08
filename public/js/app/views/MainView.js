@@ -1,7 +1,7 @@
 var app = app || {};
 
 app.MainView = Backbone.View.extend({
-    el: $("#app"),
+    el: $("#status2"),
     events: {
         'click #js-add-ticket': 'addTicket'
     },
@@ -13,7 +13,7 @@ app.MainView = Backbone.View.extend({
         this.collection.on("add", function(ticket) {
             var ticketView = new app.TicketView({model: ticket});
             console.info(ticketView);
-            this.$("#status2").append(ticketView.render().el);
+            this.$el.append(ticketView.render().el);
         }, this);
 
         this.render();console.info('init');
@@ -23,7 +23,7 @@ app.MainView = Backbone.View.extend({
         this.collection.each(function(ticket) {
             console.info(ticket);
             var ticketView = new app.TicketView({model: ticket});
-            this.$("#status2").append(ticketView.render().el);
+            this.$el.append(ticketView.render().el);
         }, this);
         return this;
     },
@@ -38,10 +38,10 @@ app.MainView = Backbone.View.extend({
                 {
                     text: 'Add',
                     click: function () {
-                        this.collection.add(new app.TicketModel(
-                            {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
-                        ));
-                        $('#js-add-ticket-form').dialog('close');
+                        //this.collection.add(new app.TicketModel(
+                        //    {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
+                        //));
+                        //$('#js-add-ticket-form').dialog('close');
                     }
                 },
                 {
