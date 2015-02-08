@@ -1,7 +1,7 @@
 var app = app || {};
 
 app.MainView = Backbone.View.extend({
-    el: $("#status2"),
+    el: $("#app"),
     events: {
         'click #js-add-ticket': 'addTicket'
     },
@@ -13,7 +13,7 @@ app.MainView = Backbone.View.extend({
         this.collection.on("add", function(ticket) {
             var ticketView = new app.TicketView({model: ticket});
             console.info(ticketView);
-            this.$el.append(ticketView.render().el);
+            this.$("#status2").append(ticketView.render().el);
         }, this);
 
         this.render();console.info('init');
@@ -23,7 +23,7 @@ app.MainView = Backbone.View.extend({
         this.collection.each(function(ticket) {
             console.info(ticket);
             var ticketView = new app.TicketView({model: ticket});
-            this.$el.append(ticketView.render().el);
+            this.$("#status2").append(ticketView.render().el);
         }, this);
         return this;
     },
