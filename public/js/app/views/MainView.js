@@ -29,7 +29,7 @@ app.MainView = Backbone.View.extend({
                 {
                     text: 'Add',
                     click: function () {
-
+                        console.info(app.ticketsList.collection);
                         app.ticketsList.collection.create(
                             {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
                         );
