@@ -2,9 +2,9 @@ var app = app || {};
 
 app.TicketsListView = Backbone.View.extend({
     el: $("#status2"),
-    initialize: function (collection) {
+    initialize: function () {
 
-        this.collection = collection;
+
         console.info(this.collection);
         this.collection.fetch();
         this.collection.on("add", function(ticket) {
