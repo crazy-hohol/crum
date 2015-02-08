@@ -18,15 +18,8 @@ app.MainView = Backbone.View.extend({
         //}, this);
         return this;
     },
-    addT: function (){
-        this.collection.add(new app.TicketModel(
-            {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
-        ));
-        $('#js-add-ticket-form').dialog('close');
-    },
-
     addTicket: function() {
-
+        var self = this;
         $('#js-add-ticket-form').dialog({
             modal: true,
             resizable: false,
@@ -35,7 +28,12 @@ app.MainView = Backbone.View.extend({
             buttons: [
                 {
                     text: 'Add',
-                    click: this.addT().apply(this)
+                    click: function () {
+                        self.collection.add(new app.TicketModel(
+                            {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
+                        ));
+                        $('#js-add-ticket-form').dialog('close');
+                    }
 
 
                 },
