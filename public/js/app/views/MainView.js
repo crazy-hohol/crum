@@ -3,7 +3,7 @@ var app = app || {};
 app.MainView = Backbone.View.extend({
     el: $("#status2"),
     events: {
-        'click #js-add-ticket': 'addTicket'
+        "click #js-add-ticket": "addTicket"
     },
     initialize: function (collection) {
 
