@@ -11,7 +11,7 @@ var MainView = Backbone.View.extend({
         this.collection.fetch();
         //this.collection.on('add', this.addOne, this);
         this.collection.on("add", function(ticket) {
-            var ticketView = new app.TicketView({model: ticket});
+            var ticketView = new TicketView({model: ticket});
             console.info(ticketView);
             this.$el.append(ticketView.render().el);
         }, this);
@@ -22,7 +22,7 @@ var MainView = Backbone.View.extend({
         //console.info(this.collection);
         this.collection.each(function(ticket) {
             console.info(ticket);
-            var ticketView = new app.TicketView({model: ticket});
+            var ticketView = new TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
         }, this);
     },
@@ -37,7 +37,7 @@ var MainView = Backbone.View.extend({
                 {
                     text: 'Add',
                     click: function () {
-                        this.collection.add(new app.TicketModel(
+                        this.collection.add(new TicketModel(
                             {'title': $("#title").val(), 'text': $("#text").val(), 'status': 2}
                         ));
                         $('#js-add-ticket-form').dialog('close');
@@ -68,7 +68,7 @@ var TicketView = Backbone.View.extend({
 });
 
 var TicketsCollection = Backbone.Collection.extend({
-    model:  app.TicketModel,
+    model:  TicketModel,
     url: '/ticket'
 });
 
@@ -85,7 +85,7 @@ var TicketModel = Backbone.Model.extend({
 //});
 
 $(document).ready(function() {
-    var coll = new app.TicketsCollection();
-    var mainV = new app.MainView(coll);
+    var coll = new TicketsCollection();
+    var mainV = new MainView(coll);
     console.info('start');
 });
