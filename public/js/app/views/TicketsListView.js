@@ -9,6 +9,9 @@ app.TicketsListView = Backbone.View.extend({
             var ticketView = new app.TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
         }, this);
+        $('.status-column').sortable({
+
+        });
 
         this.render();
     },
