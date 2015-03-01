@@ -12,7 +12,7 @@ app.TicketsListView = Backbone.View.extend({
         $('.status-column').sortable({
             connectWith: '.status-column',
             tolerance: 'pointer',
-            stop: function (event, ui) {
+            update: function (event, ui) {
                 var el = ui.item;
                 console.info(ui.item.data("id"));
             }
