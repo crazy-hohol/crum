@@ -10,7 +10,7 @@ app.TicketsListView = Backbone.View.extend({
             this.$el.append(ticketView.render().el);
         }, this);
         $('.status-column').sortable({
-
+            connectWith: '.status-column'
         });
 
         this.render();
