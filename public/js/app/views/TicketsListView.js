@@ -13,8 +13,8 @@ app.TicketsListView = Backbone.View.extend({
             connectWith: '.status-column',
             tolerance: 'pointer',
             update: function (event, ui) {
-                var el = ui.item;
-                console.info(ui);
+                var el = ui.item.context.firstElementChild;
+                console.info($(el));
             }
 
         });
