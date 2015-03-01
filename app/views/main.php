@@ -46,7 +46,7 @@
     <label for="text">Текст</label><textarea id="text"></textarea>
 </div>
 <script type="text/template" id="ticketTemplate">
-    <div class="ticket" id="ticket<%= id%>">
+    <div class="ticket" id="ticket">
         <span class="title"><%= title%></span>
     </div>
 </script>
