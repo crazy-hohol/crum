@@ -14,7 +14,7 @@ app.TicketsListView = Backbone.View.extend({
             tolerance: 'pointer',
             update: function (event, ui) {
                 var el = ui.item;
-                console.info(ui.item.data("id"));
+                console.info(ui);
             }
 
         });
