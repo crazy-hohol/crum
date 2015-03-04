@@ -9,15 +9,15 @@ app.TicketsListView = Backbone.View.extend({
             var ticketView = new app.TicketView({model: ticket});
             this.$el.append(ticketView.render().el);
         }, this);
-        $('.status-column').sortable({
-            connectWith: '.status-column',
-            tolerance: 'pointer',
-            update: function (event, ui) {
-                var el = ui.item.context.firstElementChild;
-                console.info($(el).attr('id'));
-            }
-
-        });
+        //$('.status-column').sortable({
+        //    connectWith: '.status-column',
+        //    tolerance: 'pointer',
+        //    update: function (event, ui) {
+        //        var el = ui.item.context.firstElementChild;
+        //        console.info($(el).attr('id'));
+        //    }
+        //
+        //});
 
         this.render();
     },
