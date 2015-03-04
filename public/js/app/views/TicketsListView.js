@@ -7,17 +7,17 @@ app.TicketsListView = Backbone.View.extend({
         this.collection.fetch();
         this.collection.on("add", function(ticket) {
             var ticketView = new app.TicketView({model: ticket});
-            this.$el.append(ticketView.render().el);
+            $("#status" + ticket.get('status')).append(ticketView.render().el);
         }, this);
-        //$('.status-column').sortable({
-        //    connectWith: '.status-column',
-        //    tolerance: 'pointer',
-        //    update: function (event, ui) {
-        //        var el = ui.item.context.firstElementChild;
-        //        console.info($(el).attr('id'));
-        //    }
-        //
-        //});
+        $('.status-column').sortable({
+            connectWith: '.status-column',
+            tolerance: 'pointer',
+            update: function (event, ui) {
+                var el = ui.item.context.firstElementChild;
+                console.info(ui.item.id);
+            }
+
+        });
 
         this.render();
     },
@@ -27,10 +27,7 @@ app.TicketsListView = Backbone.View.extend({
             var filteredTickets = _.filter(this.collection.models, function (item) {
                 return item.get('status') == statuses[i];
             });
-            //filteredTickets.each(function(ticket) {
-            //    var ticketView = new app.TicketView({model: ticket});
-            //    $(".status-column" + statuses[i]).append(ticketView.render().el);
-            //}, this);
+
             for (var ticket = 0; ticket < filteredTickets.length; ticket++) {
                 var ticketView = new app.TicketView({model: filteredTickets[ticket]});
                 $("#status" + statuses[i]).append(ticketView.render().el);
