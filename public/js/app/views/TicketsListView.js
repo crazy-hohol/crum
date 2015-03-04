@@ -33,7 +33,7 @@ app.TicketsListView = Backbone.View.extend({
             //}, this);
             for (var ticket = 0; ticket < filteredTickets.length; ticket++) {
                 var ticketView = new app.TicketView({model: filteredTickets[ticket]});
-                $(".status-column" + statuses[i]).append(ticketView.render().el);
+                $("#status" + statuses[i]).append(ticketView.render().el);
             }
         }
 
