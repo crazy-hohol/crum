@@ -24,7 +24,7 @@ app.TicketsListView = Backbone.View.extend({
     render: function () {
         var statuses = [2, 3, 4, 5, 6];
         for (var i = 0; i < statuses.length; i++) {
-            var filteredTickets = _.filter(this.collection, function (item) {
+            var filteredTickets = _.filter(this.collection.models, function (item) {
                 return item.get('status') == statuses[i];
             });
             //filteredTickets.each(function(ticket) {
