@@ -27,10 +27,14 @@ app.TicketsListView = Backbone.View.extend({
             var filteredTickets = _.filter(this.collection, function (item) {
                 return item.get('status') == statuses[i];
             });
-            filteredTickets.each(function(ticket) {
+            //filteredTickets.each(function(ticket) {
+            //    var ticketView = new app.TicketView({model: ticket});
+            //    $(".status-column" + statuses[i]).append(ticketView.render().el);
+            //}, this);
+            for (var ticket in filteredTickets) {
                 var ticketView = new app.TicketView({model: ticket});
                 $(".status-column" + statuses[i]).append(ticketView.render().el);
-            }, this);
+            }
         }
 
 
