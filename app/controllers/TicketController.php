@@ -32,7 +32,10 @@ class TicketController extends BaseController
     {
         $data = Input::all();
         $ticket = Ticket::find($data['id']);
-        $ticket->update(array_diff_assoc($ticket->toArray(), $data))->save();
+        foreach (array_diff_assoc($ticket->toArray(), $data) as $key => $val) {
+            $ticket->{$key} = $val;
+        }
+        $ticket->save();
         return Response::json($ticket->toArray());
 
     }
