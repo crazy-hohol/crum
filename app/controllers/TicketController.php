@@ -32,7 +32,7 @@ class TicketController extends BaseController
     {
         $data = Input::all();
         $ticket = Ticket::find($data['id']);
-        //die(var_dump($ticket->toArray()));
+        die(var_dump($data));
         $ticket->update(array_intersect($ticket->toArray(), $data));
 
     }
