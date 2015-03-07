@@ -30,7 +30,7 @@ class TicketController extends BaseController
 
     public function putIndex()
     {
-        $data = json_decode(Input::all());
+        $data = Input::all();
         $ticket = Ticket::find($data['id']);
         $ticket->update(array_diff($ticket->toArray(), $data));
 
