@@ -32,6 +32,7 @@ class TicketController extends BaseController
     {
         $data = Input::all();
         $ticket = Ticket::find($data['id']);
+        die(var_dump(array_diff_assoc($ticket->toArray(), $data)));
         foreach (array_diff_assoc($ticket->toArray(), $data) as $key => $val) {
             die(var_dump([$key => $val]));
             $ticket->{$key} = $val;
