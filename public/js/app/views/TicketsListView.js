@@ -3,7 +3,7 @@ var app = app || {};
 app.TicketsListView = Backbone.View.extend({
     //el: $("#status2"),
     initialize: function () {
-
+        var collection = this.collection;
         this.collection.fetch();
         this.collection.on("add", function(ticket) {
             var ticketView = new app.TicketView({model: ticket});
@@ -14,7 +14,7 @@ app.TicketsListView = Backbone.View.extend({
             tolerance: 'pointer',
             update: function (event, ui) {
                 var el = $(ui.item.context.firstElementChild);
-                var model = this.collection.get(el.attr('id').replace('ticket', ''));
+                var model = collection.get(el.attr('id').replace('ticket', ''));
                 var status = el.parent().attr('id').replace('status', '');
             }
 
