@@ -14,8 +14,8 @@ app.TicketsListView = Backbone.View.extend({
             tolerance: 'pointer',
             update: function (event, ui) {
                 var el = $(ui.item.context.firstElementChild);
-                var model = this.collection.get(el.id().replace('ticket', ''));
-                var status = el.parent().id().replace('status', '');
+                var model = this.collection.get(el.attr('id').replace('ticket', ''));
+                var status = el.parent().attr('id').replace('status', '');
             }
 
         });
