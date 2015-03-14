@@ -28,8 +28,9 @@ img {
     position: fixed;
     z-index: 99999;
     bottom: 0;
+    left: 40%;
     width: 500px;
-    height: 150px;
+    height: 80px;
     display: block;
     border: 1px solid #000000;
     background: url("/images/w448h5121380477116trash.png") no-repeat center;
