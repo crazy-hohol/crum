@@ -12,10 +12,6 @@ app.MainView = Backbone.View.extend({
         app.ticketsList = new app.TicketsListView({collection: coll}).render();
     },
     render: function () {
-        //this.collection.each(function(ticket) {
-        //    var ticketView = new app.TicketView({model: ticket});
-        //    this.$el.append(ticketView.render().el);
-        //}, this);
         return this;
     },
     addTicket: function() {
@@ -36,8 +32,6 @@ app.MainView = Backbone.View.extend({
                         );
                         $('#js-add-ticket-form').dialog('close');
                     }
-
-
                 },
                 {
                     text: 'Cancel',

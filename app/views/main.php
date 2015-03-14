@@ -50,12 +50,33 @@
         <span class="title"><%= title%></span>
     </div>
 </script>
+
+
+<script type="text/x-handlebars-template" id="ticket-main-template">
+    <div>
+        <div>
+            <span>{{title}}</span>
+            <input type="text" value="{{title}}">
+        </div>
+        <div>
+            <span>{{text}}</span>
+            <select></select>
+        </div>
+        <div>
+            <span>{{text}}</span>
+            <textarea>{{text}}</textarea>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</script>
+
+
 <script type="text/javascript" src="/js/app/models/TicketModel.js"></script>
 <script type="text/javascript" src="/js/app/collections/TicketsCollection.js"></script>
 <script type="text/javascript" src="/js/app/views/TicketView.js"></script>
 <script type="text/javascript" src="/js/app/views/TicketsListView.js"></script>
 <script type="text/javascript" src="/js/app/views/MainView.js"></script>
-<!--    <script type="text/javascript" src="/js/app/"></script>-->
 <script type="text/javascript" src="/js/app/app.js"></script>
 </body>
 </html>
