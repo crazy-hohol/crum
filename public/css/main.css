@@ -32,6 +32,7 @@ img {
     height: 150px;
     display: block;
     border: 1px solid #000000;
+    background: url("/images/w448h5121380477116trash.png") no-repeat center;
 }
 
 .archive-block {
