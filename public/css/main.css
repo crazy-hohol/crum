@@ -19,8 +19,8 @@ img {
 .status-column {
     border: 1px solid #cccccc;
     float: left;
-    width: 350px;
-    height: 1500px;
+    width: 23%;
+    min-height: 800px;
     margin: 3px;
 }
 
