@@ -18,7 +18,7 @@ app.Router = Backbone.Router.extend({
 
 $(document).ready(function() {
     var router = new app.Router();
-    Backbone.History.start();
+    Backbone.history.start();
 
 
 });
