@@ -28,7 +28,7 @@
                 <button class="btn btn-large btn-danger delete">New Category</button>
             </div>
             <div class="span-7"></div>
-            <div class="row-fluid show" id="statuses">
+            <div class="row-fluid show" id="app">
                 <div class="status-column" id="status2"></div>
                 <div class="status-column" id="status3"></div>
                 <div class="status-column" id="status4"></div>
