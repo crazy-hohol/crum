@@ -13,7 +13,7 @@ img {
 
 #app {
     display: block;
-    height: 1500px;
+    min-height: 800px;
 }
 
 .status-column {
@@ -22,7 +22,26 @@ img {
     width: 350px;
     height: 1500px;
     margin: 3px;
+}
 
+.trash-block {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    width: 500px;
+    height: 150px;
+    display: block;
+    border: 1px solid #000000;
+}
+
+.archive-block {
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    width: 150px;
+    height: 500px;
+    display: block;
+    border: 1px solid #000000;
 }
 
 .ticket {

@@ -33,7 +33,8 @@
                 <div class="status-column" id="status3"></div>
                 <div class="status-column" id="status4"></div>
                 <div class="status-column" id="status5"></div>
-                <div class="status-column" id="status6"></div>
+                <div class="trash-block" id="status0"></div>
+                <div class="archive-block" id="status1"></div>
             </div>
         </div>
     </div>
