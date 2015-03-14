@@ -3,7 +3,7 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
     routes: {
         "ticket/:id": "showTicket",
-        "/": "showMain"
+        "": "showMain"
     },
     showTicket: function(id) {
         var ticket = new app.TicketModel();
