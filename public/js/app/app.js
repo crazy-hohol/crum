@@ -6,8 +6,8 @@ app.Router = Backbone.Router.extend({
         "": "showMain"
     },
     showTicket: function(id) {
-        var ticket = new app.TicketModel();
-        var ticketView = new app.TicketMainView({model: ticket.sync('read', {id: id})});
+        var tickets = new app.TicketsCollection();
+        var ticketView = new app.TicketMainView({model: tickets.get(id)});
         $('#app').html(ticketView.render().el);
     },
 
