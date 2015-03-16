@@ -5,6 +5,9 @@ app.Router = Backbone.Router.extend({
         "ticket/:id": "showTicket",
         "": "showMain"
     },
+    initialize: function() {
+
+    },
     showTicket: function(id) {
         var tickets = new app.TicketsCollection();
         tickets.fetch();
@@ -13,7 +16,8 @@ app.Router = Backbone.Router.extend({
     },
 
     showMain: function() {
-        var mainV = new app.MainView().render();
+        var suibView = new app.TicketsListView();
+        var mainView = new app.MainView({subView: suibView}).render();
     }
 
 });

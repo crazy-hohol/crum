@@ -6,7 +6,7 @@ app.MainView = Backbone.View.extend({
         "click #js-add-ticket": 'addTicket'
 
     },
-    initialize: function () {
+    initialize: function (options) {
 
         var coll = new app.TicketsCollection();
         app.ticketsList = new app.TicketsListView({collection: coll}).render();
