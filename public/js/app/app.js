@@ -10,7 +10,9 @@ app.Router = Backbone.Router.extend({
     },
     showTicket: function(id) {
         var tickets = new app.TicketsCollection();
-        tickets.fetch();
+        setTimeout(function () {
+            tickets.fetch();
+        }, 30000);
         console.info(tickets);
         console.info(tickets.get(id));
         var ticketView = new app.TicketMainView({model: tickets.get(id)});
