@@ -11,6 +11,8 @@ app.Router = Backbone.Router.extend({
     showTicket: function(id) {
         var tickets = new app.TicketsCollection();
         tickets.fetch();
+        console.info(tickets);
+        console.info(tickets.get(id));
         var ticketView = new app.TicketMainView({model: tickets.get(id)});
         $('#app').html(ticketView.render().el);
     },
