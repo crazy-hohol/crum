@@ -6,8 +6,8 @@ app.Router = Backbone.Router.extend({
         "": "showMain"
     },
     initialize: function() {
-        app.tickets = new app.TicketsCollection();
-        app.tickets.fetch();
+        app.tickets = app.tickets || new app.TicketsCollection();
+        //app.tickets.fetch();
     },
     showTicket: function(id) {
 

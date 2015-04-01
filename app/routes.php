@@ -13,7 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('main');
+    $tickets = Ticket::all();
+	return View::make('main', ['tickets' => json_encode($tickets->toArray())]);
 });
 
 Route::controller('ticket', 'TicketController');
