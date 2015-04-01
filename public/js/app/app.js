@@ -18,7 +18,7 @@ app.Router = Backbone.Router.extend({
     },
 
     showMain: function() {
-        var suibView = new app.TicketsListView({collection: app.tickets});
+        var suibView = new app.TicketsListView({collection: this.tickets});
         var mainView = new app.MainView({subView: suibView}).render();
     }
 
