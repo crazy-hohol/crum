@@ -6,14 +6,14 @@ app.Router = Backbone.Router.extend({
         "": "showMain"
     },
     initialize: function() {
-        console.info(app.tickets);
-        //app.tickets = app.tickets || new app.TicketsCollection();
-        //app.tickets.fetch();
+
+        this.tickets = new app.TicketsCollection();
+
     },
     showTicket: function(id) {
 
-        console.info(app.tickets.get(id));
-        var ticketView = new app.TicketMainView({model: app.tickets.get(id)});
+        console.info(this.tickets.get(id));
+        var ticketView = new app.TicketMainView({model: this.tickets.get(id)});
         $('#app').html(ticketView.render().el);
     },
 
@@ -23,9 +23,9 @@ app.Router = Backbone.Router.extend({
     }
 
 });
-
+var router = new app.Router();
 $(document).ready(function() {
-    var router = new app.Router();
+
     Backbone.history.start();
 
 

@@ -79,11 +79,11 @@
 <script type="text/javascript" src="/js/app/views/TicketsListView.js"></script>
 <script type="text/javascript" src="/js/app/views/TicketMainView.js"></script>
 <script type="text/javascript" src="/js/app/views/MainView.js"></script>
-<script type="text/javascript">
-    var app = app || {};
-    app.tickets = app.TicketsCollection(<?php echo $tickets;?>);
-</script>
 <script type="text/javascript" src="/js/app/app.js"></script>
+<script type="text/javascript">
+
+    router.tickets.reset(<?php echo $tickets;?>);
+</script>
 
 </body>
 </html>
