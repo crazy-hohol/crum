@@ -6,17 +6,13 @@ app.Router = Backbone.Router.extend({
         "": "showMain"
     },
     initialize: function() {
-
+        app.tickets = new app.TicketsCollection();
+        app.tickets.fetch();
     },
     showTicket: function(id) {
-        var tickets = new app.TicketsCollection();
-        tickets.fetch();
-        setTimeout(function () {
-            console.info(tickets.get(id));
-        }, 30000);
-        console.info(tickets);
 
-        var ticketView = new app.TicketMainView({model: tickets.get(id)});
+
+        var ticketView = new app.TicketMainView({model: app.tickets.get(id)});
         $('#app').html(ticketView.render().el);
     },
 
