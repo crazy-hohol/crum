@@ -4,7 +4,7 @@ app.TicketsListView = Backbone.View.extend({
     //el: $("#status2"),
     initialize: function () {
         var collection = this.collection;
-        this.collection.fetch();
+        this.collection.fetch({reset: true});
         this.collection.on("add", function(ticket) {
             var ticketView = new app.TicketView({model: ticket});
             $("#status" + ticket.get('status')).append(ticketView.render().el);
