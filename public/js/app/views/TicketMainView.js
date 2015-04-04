@@ -13,9 +13,9 @@ app.TicketMainView = Backbone.View.extend({
         return this;
     },
 
-    editDialog: function () {
-        console.info(this);
+    editDialog: function (el) {
+        console.info(el.target);
         $(".edit-form").hide();
-        $(this).next().show();
+        $(el.target).next().show();
     }
 });
