@@ -29,12 +29,7 @@
             </div>
             <div class="span-7"></div>
             <div class="row-fluid show" id="app">
-                <div class="status-column" id="status2"></div>
-                <div class="status-column" id="status3"></div>
-                <div class="status-column" id="status4"></div>
-                <div class="status-column" id="status5"></div>
-                <div class="trash-block" id="status0"></div>
-                <div class="archive-block" id="status1"></div>
+
             </div>
         </div>
     </div>
@@ -52,6 +47,14 @@
     </div>
 </script>
 
+<script type="text/x-handlebars-template" id="statuses-columns-template">
+    <div class="status-column" id="status2"></div>
+    <div class="status-column" id="status3"></div>
+    <div class="status-column" id="status4"></div>
+    <div class="status-column" id="status5"></div>
+    <div class="trash-block" id="status0"></div>
+    <div class="archive-block" id="status1"></div>
+</script>
 
 <script type="text/x-handlebars-template" id="ticket-main-template">
     <div>

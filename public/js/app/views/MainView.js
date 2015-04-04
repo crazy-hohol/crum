@@ -12,6 +12,8 @@ app.MainView = Backbone.View.extend({
         app.ticketsList = new app.TicketsListView({collection: coll}).render();
     },
     render: function () {
+
+        $("#app").html(this.subView.render().el);
         return this;
     },
     addTicket: function() {

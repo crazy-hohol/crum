@@ -2,6 +2,8 @@ var app = app || {};
 
 app.TicketsListView = Backbone.View.extend({
     //el: $("#status2"),
+
+    template: Handlebars.compile($('#statuses-columns-template').html()),
     initialize: function () {
         var collection = this.collection;
         this.collection.fetch({reset: true});
@@ -35,7 +37,7 @@ app.TicketsListView = Backbone.View.extend({
                 $("#status" + statuses[i]).append(ticketView.render().el);
             }
         }
-
+        //this.$el.html(this.template(this.model.attributes));
 
         return this;
     }

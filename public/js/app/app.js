@@ -8,18 +8,22 @@ app.Router = Backbone.Router.extend({
     initialize: function() {
 
         this.tickets = new app.TicketsCollection();
+        this.mainView = new app.MainView();
 
     },
     showTicket: function(id) {
 
-        console.info(this.tickets.get(id));
         var ticketView = new app.TicketMainView({model: this.tickets.get(id)});
-        $('#app').html(ticketView.render().el);
+        //$('#app').html(ticketView.render().el);
+        this.mainView.subView = ticketView;
+        this.mainView.render();
     },
 
     showMain: function() {
-        var suibView = new app.TicketsListView({collection: this.tickets});
-        var mainView = new app.MainView({subView: suibView}).render();
+        var ticketsListView = new app.TicketsListView({collection: this.tickets});
+        //var mainView = new app.MainView({subView: subView}).render();
+        this.mainView.subView = ticketsListView;
+        this.mainView.render();
     }
 
 });
