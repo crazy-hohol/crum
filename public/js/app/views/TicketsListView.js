@@ -5,6 +5,7 @@ app.TicketsListView = Backbone.View.extend({
 
     template: Handlebars.compile($('#statuses-columns-template').html()),
     initialize: function () {
+        this.$el.html(this.template());
         var collection = this.collection;
         this.collection.fetch({reset: true});
         this.collection.on("add", function(ticket) {
@@ -27,7 +28,7 @@ app.TicketsListView = Backbone.View.extend({
     },
     render: function () {
         var statuses = [2, 3, 4, 5, 6];
-        this.$el.html(this.template());
+
         for (var i = 0; i < statuses.length; i++) {
             var filteredTickets = _.filter(this.collection.models, function (item) {
                 return item.get('status') == statuses[i];
