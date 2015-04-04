@@ -62,14 +62,14 @@
     <div class="center-form">
         <div class="set">
             <h3>{{title}}</h3><img src="/images/edit-icon.png" class="edit-field-button"/>
-            <div class="edit-form">
+            <div class="edit-form" style="display: block">
                 <textarea cols="100" rows="3">{{title}}</textarea><br/>
                 <button class="btn btn-info">Save</button><button class="btn">Cancel</button>
             </div>
         </div>
         <div class="set">
             <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
-            <div class="edit-form">
+            <div class="edit-form" style="display: block">
                 <select></select><br>
                 <button class="btn btn-info">Save</button><button class="btn">Cancel</button>
             </div>
@@ -77,7 +77,7 @@
         </div>
         <div class="set">
             <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
-            <div class="edit-form">
+            <div class="edit-form" style="display: block">
                 <textarea cols="100" rows="6">{{text}}</textarea><br/>
                 <button class="btn btn-info">Save</button><button class="btn">Cancel</button>
             </div>
