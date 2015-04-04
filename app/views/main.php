@@ -48,26 +48,28 @@
 </script>
 
 <script type="text/x-handlebars-template" id="statuses-columns-template">
-    <div class="status-column" id="status2"></div>
-    <div class="status-column" id="status3"></div>
-    <div class="status-column" id="status4"></div>
-    <div class="status-column" id="status5"></div>
-    <div class="trash-block" id="status0"></div>
-    <div class="archive-block" id="status1"></div>
+    <div class="span12">
+        <div class="status-column" id="status2"></div>
+        <div class="status-column" id="status3"></div>
+        <div class="status-column" id="status4"></div>
+        <div class="status-column" id="status5"></div>
+        <div class="trash-block" id="status0"></div>
+        <div class="archive-block" id="status1"></div>
+    </div>
 </script>
 
 <script type="text/x-handlebars-template" id="ticket-main-template">
-    <div>
+    <div class="span12">
         <div>
-            <span>{{title}}</span>
+            <span >{{title}}</span><img src="/public/images/edit-icon.png" class="edit-field-button"/>
             <input type="text" value="{{title}}">
         </div>
         <div>
-            <span>{{text}}</span>
+            <span>{{text}}</span><img src="/public/images/edit-icon.png" class="edit-field-button"/>
             <select></select>
         </div>
         <div>
-            <span>{{text}}</span>
+            <span>{{text}}</span><img src="/public/images/edit-icon.png" class="edit-field-button"/>
             <textarea>{{text}}</textarea>
         </div>
         <div></div>
