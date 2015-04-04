@@ -59,18 +59,28 @@
 </script>
 
 <script type="text/x-handlebars-template" id="ticket-main-template">
-    <div class="span12">
-        <div>
-            <span >{{title}}</span><img src="/public/images/edit-icon.png" class="edit-field-button"/>
-            <input type="text" value="{{title}}">
+    <div class="center-form">
+        <div class="set">
+            <h3>{{title}}</h3><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <div class="edit-form">
+                <textarea cols="100" rows="3">{{title}}</textarea><br/>
+                <button class="btn btn-info">Save</button><button class="btn">Cancel</button>
+            </div>
         </div>
-        <div>
-            <span>{{text}}</span><img src="/public/images/edit-icon.png" class="edit-field-button"/>
-            <select></select>
+        <div class="set">
+            <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <div class="edit-form">
+                <select></select><br>
+                <button class="btn btn-info">Save</button><button class="btn">Cancel</button>
+            </div>
+
         </div>
-        <div>
-            <span>{{text}}</span><img src="/public/images/edit-icon.png" class="edit-field-button"/>
-            <textarea>{{text}}</textarea>
+        <div class="set">
+            <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <div class="edit-form">
+                <textarea cols="100" rows="6">{{text}}</textarea><br/>
+                <button class="btn btn-info">Save</button><button class="btn">Cancel</button>
+            </div>
         </div>
         <div></div>
         <div></div>

@@ -59,3 +59,21 @@ img {
     background-color: #faf2cc;
 }
 
+.center-form {
+    width:700px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+
+.set h3 {
+    display: inline-block;
+    width: 700px;
+    text-align: justify;
+}
+
+.set span {
+    display: inline-block;
+    width: 700px;
+    text-align: justify;
+}
