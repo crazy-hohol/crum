@@ -60,7 +60,7 @@ img {
 }
 
 .center-form {
-    width:700px;
+    width: 80%px;
     margin: auto;
     display: block;
     padding: 10px;
@@ -68,12 +68,12 @@ img {
 
 .set h3 {
     display: inline-block;
-    width: 700px;
+    width: 78%;
     text-align: justify;
 }
 
 .set span {
     display: inline-block;
-    width: 700px;
+    width: 78%;
     text-align: justify;
 }
