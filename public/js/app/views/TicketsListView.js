@@ -9,9 +9,9 @@ app.TicketsListView = Backbone.View.extend({
         this.collection.fetch({reset: true});
         this.collection.on("add", function(ticket) {
             var ticketView = new app.TicketView({model: ticket});
-            $("#status" + ticket.get('status')).append(ticketView.render().el);
+            $("#status" + ticket.get('status'), this.$el).append(ticketView.render().el);
         }, this);
-        $('.status-column').sortable({
+        $('.status-column', this.$el).sortable({
             connectWith: '.status-column',
             tolerance: 'pointer',
             update: function (event, ui) {
