@@ -65,10 +65,11 @@ img {
     display: block;
     padding: 10px;
 }
-
+.set {
+    margin-bottom: 10px;
+}
 .set h3 {
     display: inline-block;
-    width: 75%;
     text-align: justify;
 }
 
@@ -77,3 +78,11 @@ img {
     width: 75%;
     text-align: justify;
 }
+
+.edit-form {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #898989;
+    margin-bottom: 3px;
+}
+
+
