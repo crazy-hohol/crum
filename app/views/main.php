@@ -69,7 +69,7 @@
                 />
             <div class="edit-form" style="display: none">
                 <textarea cols="100" rows="3">{{title}}</textarea><br/>
-                <button class="btn btn-primary" class="js-save-field">Save</button>
+                <button class="btn btn-primary js-save-field">Save</button>
                 <button class="btn">Cancel</button>
             </div>
         </div>
@@ -77,7 +77,7 @@
             <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
             <div class="edit-form" style="display: none">
                 <select></select><br>
-                <button class="btn btn-primary" class="js-save-field">Save</button>
+                <button class="btn btn-primary js-save-field">Save</button>
                 <button class="btn">Cancel</button>
             </div>
 
@@ -86,7 +86,7 @@
             <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
             <div class="edit-form" style="display: none">
                 <textarea cols="100" rows="6">{{text}}</textarea><br/>
-                <button class="btn btn-primary" class="js-save-field">Save</button>
+                <button class="btn btn-primary js-save-field">Save</button>
                 <button class="btn">Cancel</button>
             </div>
         </div>
