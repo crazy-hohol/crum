@@ -27,7 +27,7 @@ app.TicketMainView = Backbone.View.extend({
         var ticket = this.model;
         var field = el.parent().prev().data('field');
         console.info(field);
-        var value = el.prev().val();
+        var value = el.prev().text();
         console.info(value);
         ticket.set(field, value);
         ticket.save({
