@@ -62,7 +62,7 @@
 <script type="text/x-handlebars-template" id="ticket-main-template">
     <div class="center-form">
         <div class="set">
-            <h3>{{title}}</h3><img src="/images/edit-icon.png"
+            <h3 id="title-field">{{title}}</h3><img src="/images/edit-icon.png"
                                    class="edit-field-button"
                                    data-id="{{id}}"
                                    data-field="title"
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="set">
-            <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <span id="text-field">{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
             <div class="edit-form" style="display: none">
                 <select></select><br>
                 <button class="btn btn-primary js-save-field">Save</button>
@@ -83,7 +83,7 @@
 
         </div>
         <div class="set">
-            <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <span id="text-field">{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
             <div class="edit-form" style="display: none">
                 <textarea cols="100" rows="6">{{text}}</textarea><br/>
                 <button class="btn btn-primary js-save-field">Save</button>

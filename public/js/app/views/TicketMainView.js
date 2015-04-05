@@ -8,7 +8,11 @@ app.TicketMainView = Backbone.View.extend({
     },
     initialize: function () {
         this.model.on('change', function(ticket) {
-            //this.render();
+            var changes = ticket.changedAttributes();
+            for (ch in changes) {
+                $("#" + ch + "-field").html(changes[ch]);
+            }
+
         });
     },
     render: function () {
