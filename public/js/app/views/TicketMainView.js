@@ -8,7 +8,7 @@ app.TicketMainView = Backbone.View.extend({
     },
     initialize: function () {
         this.model.on('change', function(ticket) {
-            this.render();
+            //this.render();
         });
     },
     render: function () {
