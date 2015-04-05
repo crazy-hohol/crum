@@ -3,7 +3,7 @@ var app = app || {};
 app.TicketMainView = Backbone.View.extend({
     template: Handlebars.compile($('#ticket-main-template').html()),
     events: {
-        "click .edit-field-button": "editDialog",
+        "click .js-edit-field-button": "editDialog",
         "click .js-save-field": "saveEditedField",
         "click .js-cancel-edition": "cancelEditDialog"
     },
