@@ -29,8 +29,8 @@ app.TicketMainView = Backbone.View.extend({
         console.info(field);
         var value = el.prev().prev().val();
         console.info(value);
-        ticket.set(field, value);
-        ticket.save({
+        //ticket.set(field, value);
+        ticket.save(field, value, {
             wait: true,
             success: function (res) {
                 $(".edit-form").hide();
