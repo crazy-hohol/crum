@@ -4,7 +4,8 @@ app.TicketMainView = Backbone.View.extend({
     template: Handlebars.compile($('#ticket-main-template').html()),
     events: {
         "click .edit-field-button": "editDialog",
-        "click .js-save-field": "saveEditedField"
+        "click .js-save-field": "saveEditedField",
+        "click .js-cancel-edition": "cancelEditDialog"
     },
     initialize: function () {
         this.model.on('change', function(ticket) {
@@ -21,7 +22,8 @@ app.TicketMainView = Backbone.View.extend({
     },
 
     editDialog: function (el) {
-        console.info(el.target);
+        var field = $(el.target).data("field");
+        $("#" + field + "-field-edit").val(this.model.get(field));
         $(".edit-form").hide();
         $(el.target).next().show();
     },
@@ -40,6 +42,11 @@ app.TicketMainView = Backbone.View.extend({
                 $(".edit-form").hide();
             }
         });
+    },
+
+    cancelEditDialog: function(el) {
+        $(".edit-form").hide();
+        $(el.target()).prev().prev().prev().html('');
     }
 
 });

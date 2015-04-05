@@ -63,31 +63,39 @@
     <div class="center-form">
         <div class="set">
             <h3 id="title-field">{{title}}</h3><img src="/images/edit-icon.png"
-                                   class="edit-field-button"
+                                   class="js-edit-field-button"
                                    data-id="{{id}}"
                                    data-field="title"
                 />
             <div class="edit-form" style="display: none">
-                <textarea cols="100" rows="3">{{title}}</textarea><br/>
+                <textarea cols="100" rows="3" id="title-field-edit">{{title}}</textarea><br/>
                 <button class="btn btn-primary js-save-field">Save</button>
-                <button class="btn">Cancel</button>
+                <button class="btn js-cancel-edition">Cancel</button>
             </div>
         </div>
         <div class="set">
-            <span id="text-field">{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <span id="story-field">{{text}}</span><img src="/images/edit-icon.png"
+                                                      class="js-edit-field-button"
+                                                      data-id="{{id}}"
+                                                      data-field="story"
+                />
             <div class="edit-form" style="display: none">
-                <select></select><br>
+                <select  id="story-field-edit"></select><br>
                 <button class="btn btn-primary js-save-field">Save</button>
-                <button class="btn">Cancel</button>
+                <button class="btn js-cancel-edition">Cancel</button>
             </div>
 
         </div>
         <div class="set">
-            <span id="text-field">{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <span id="text-field">{{text}}</span><img src="/images/edit-icon.png"
+                                                      class="js-edit-field-button"
+                                                      data-id="{{id}}"
+                                                      data-field="text"
+                />
             <div class="edit-form" style="display: none">
-                <textarea cols="100" rows="6">{{text}}</textarea><br/>
+                <textarea cols="100" rows="6"  id="text-field-edit">{{text}}</textarea><br/>
                 <button class="btn btn-primary js-save-field">Save</button>
-                <button class="btn">Cancel</button>
+                <button class="btn js-cancel-edition">Cancel</button>
             </div>
         </div>
         <div></div>
