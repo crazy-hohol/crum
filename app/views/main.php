@@ -43,6 +43,7 @@
 </div>
 <script type="text/template" id="ticketTemplate">
     <div class="ticket" id="ticket<%= id%>">
+        <a href="#/ticket/<%= id%>"><img src="/images/edit-icon.png" title="view ticket"/></a>
         <span class="title"><%= title%></span>
     </div>
 </script>
@@ -61,10 +62,14 @@
 <script type="text/x-handlebars-template" id="ticket-main-template">
     <div class="center-form">
         <div class="set">
-            <h3>{{title}}</h3><img src="/images/edit-icon.png" class="edit-field-button"/>
+            <h3>{{title}}</h3><img src="/images/edit-icon.png"
+                                   class="edit-field-button"
+                                   data-id="{{id}}"
+                                   data-field="title"
+                />
             <div class="edit-form" style="display: none">
                 <textarea cols="100" rows="3">{{title}}</textarea><br/>
-                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-primary" class="js-save-field">Save</button>
                 <button class="btn">Cancel</button>
             </div>
         </div>
@@ -72,7 +77,7 @@
             <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
             <div class="edit-form" style="display: none">
                 <select></select><br>
-                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-primary" class="js-save-field">Save</button>
                 <button class="btn">Cancel</button>
             </div>
 
@@ -81,7 +86,7 @@
             <span>{{text}}</span><img src="/images/edit-icon.png" class="edit-field-button"/>
             <div class="edit-form" style="display: none">
                 <textarea cols="100" rows="6">{{text}}</textarea><br/>
-                <button class="btn btn-primary">Save</button>
+                <button class="btn btn-primary" class="js-save-field">Save</button>
                 <button class="btn">Cancel</button>
             </div>
         </div>
