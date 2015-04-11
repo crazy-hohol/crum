@@ -1,4 +1,7 @@
-var app = app || {};
-app.TicketModel = Backbone.Model.extend({
-    url: '/ticket'
+//var app = app || {};
+define(['backbone'], function(Backbone) {
+    TicketModel = Backbone.Model.extend({
+        url: '/ticket'
+    });
+    return TicketModel;
 });

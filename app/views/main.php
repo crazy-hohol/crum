@@ -111,6 +111,8 @@
 <script type="text/javascript" src="/js/app/views/TicketMainView.js"></script>
 <script type="text/javascript" src="/js/app/views/MainView.js"></script>
 <script type="text/javascript" src="/js/app/app.js"></script>
+<script data-main="js/app" src="js/require.js"></script>
+
 <script type="text/javascript">
 
     router.tickets.reset(<?php echo $tickets;?>);

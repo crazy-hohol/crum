@@ -1,5 +1,10 @@
-var app = app || {};
-app.TicketsCollection = Backbone.Collection.extend({
-    model:  app.TicketModel,
-    url: '/ticket'
+//var app = app || {};
+
+define(['backbone'], function(Backbone) {
+    TicketsCollection = Backbone.Collection.extend({
+        model:  app.TicketModel,
+        url: '/ticket'
+    });
+
+    return TicketsCollection;
 });
