@@ -39,7 +39,8 @@ require.config({
         views: '../app/views',
         models: '../app/models',
         collections: '../app/collections',
-        templates: '../app/templates'
+        templates: '../app/templates',
+        text: 'text'
 
     },
     shim: {

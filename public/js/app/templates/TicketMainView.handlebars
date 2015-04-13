@@ -1,15 +1,40 @@
-<div>
-    <div>
-        <span>{{title}}</span>
-        <input type="text" value="{{title}}">
+<div class="center-form">
+    <div class="set">
+        <h3 id="title-field">{{title}}</h3><img src="/images/edit-icon.png"
+                                                class="js-edit-field-button"
+                                                data-id="{{id}}"
+                                                data-field="title"
+            />
+        <div class="edit-form" style="display: none">
+            <textarea cols="100" rows="3" id="title-field-edit">{{title}}</textarea><br/>
+            <button class="btn btn-primary js-save-field">Save</button>
+            <button class="btn js-cancel-edition">Cancel</button>
+        </div>
     </div>
-    <div>
-        <span>{{text}}</span>
-        <select></select>
+    <div class="set">
+        <span id="story-field">{{text}}</span><img src="/images/edit-icon.png"
+                                                   class="js-edit-field-button"
+                                                   data-id="{{id}}"
+                                                   data-field="story"
+            />
+        <div class="edit-form" style="display: none">
+            <select  id="story-field-edit"></select><br>
+            <button class="btn btn-primary js-save-field">Save</button>
+            <button class="btn js-cancel-edition">Cancel</button>
+        </div>
+
     </div>
-    <div>
-        <span>{{text}}</span>
-        <textarea>{{text}}</textarea>
+    <div class="set">
+        <span id="text-field">{{text}}</span><img src="/images/edit-icon.png"
+                                                  class="js-edit-field-button"
+                                                  data-id="{{id}}"
+                                                  data-field="text"
+            />
+        <div class="edit-form" style="display: none">
+            <textarea cols="100" rows="6"  id="text-field-edit">{{text}}</textarea><br/>
+            <button class="btn btn-primary js-save-field">Save</button>
+            <button class="btn js-cancel-edition">Cancel</button>
+        </div>
     </div>
     <div></div>
     <div></div>
