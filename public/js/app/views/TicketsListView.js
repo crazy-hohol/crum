@@ -1,6 +1,6 @@
 //var app = app || {};
 define(
-    ['handlebars', 'backbone', 'underscore', 'jquery', 'jquery-ui', 'views/TicketView', 'text!templates/TicketsListView.handlebars'],
+    ['handlebars', 'backbone', 'underscore', 'jquery', 'jquery-ui', 'views/TicketView', 'templates/TicketsListView.handlebars'],
     function(Handlebars, Backbone, _, $, TicketView, templateList) {
         console.info(templateList);
         var TicketsListView = Backbone.View.extend({
