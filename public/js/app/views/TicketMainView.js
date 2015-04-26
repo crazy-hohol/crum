@@ -1,6 +1,6 @@
 //var app = app || {};
 
-define(['backbone', 'jquery', 'handlebars', 'text!tempates/TicketMainView'], function(Backbone, $, Handlebars, template) {
+define(['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handlebars'], function(Backbone, $, Handlebars, template) {
     var TicketMainView = Backbone.View.extend({
         template: Handlebars.compile(template),
         events: {
