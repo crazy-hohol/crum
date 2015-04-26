@@ -1,7 +1,7 @@
 define(
     ['backbone', 'collections/TicketsCollection', 'views/MainView', 'views/TicketmainView', 'views/TicketsListView'],
     function(Backbone, TicketsCollection, MainView, TicketMainView, TicketsListView) {
-        Router = Backbone.Router.extend({
+        var Router = Backbone.Router.extend({
             routes: {
                 "ticket/:id": "showTicket",
                 "": "showMain",
@@ -27,7 +27,7 @@ define(
             }
 
         });
-        return router;
+        return Router;
     }
 );
 

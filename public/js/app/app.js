@@ -30,11 +30,11 @@
 require.config({
     baseUrl: 'js/lib',
     paths: {
-        jquey: 'jquery-2.0.0',
+        jquery: 'jquery-2.0.0',
         backbone: 'backbone',
         underscore: 'underscore',
         handlebars: 'handlebars',
-        'jquery-ui': 'ui/jquer-ui',
+        'jquery-ui': 'ui/jquery-ui',
         router: '../app/router',
         views: '../app/views',
         models: '../app/models',
@@ -52,11 +52,12 @@ require.config({
         }
     }
 });
+require(['backbone', 'jquery', 'router'], function(Backbone, $, Router) {
+    var routerApp = new Router();
+    $(document).ready(function() {
 
-var router = new app.Router();
-$(document).ready(function() {
-
-    Backbone.history.start();
+        Backbone.history.start();
 
 
+    });
 });

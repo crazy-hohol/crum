@@ -1,5 +1,5 @@
 //var app = app || {};
-define(['backbone', 'jquery', 'jquery-ui', ], function(Backbone, $) {
+define(['backbone', 'jquery', 'jquery-ui'], function(Backbone, $) {
     var MainView = Backbone.View.extend({
         el: $("#main"),
         events: {
@@ -18,31 +18,31 @@ define(['backbone', 'jquery', 'jquery-ui', ], function(Backbone, $) {
         },
         addTicket: function() {
             var self = this;
-            $('#js-add-ticket-form').dialog({
-                modal: true,
-                resizable: false,
-                width: 800,
-                height: 600,
-                buttons: [
-                    {
-                        text: 'Add',
-                        click: function () {
-                            console.info(app.ticketsList.collection);
-                            app.ticketsList.collection.create(
-                                {title: $("#title").val(), text: $("#text").val(), status: 2},
-                                {wait: true}
-                            );
-                            $('#js-add-ticket-form').dialog('close');
-                        }
-                    },
-                    {
-                        text: 'Cancel',
-                        click: function () {
-                            $('#js-add-ticket-form').dialog('close');
-                        }
-                    }
-                ]
-            });
+            //$('#js-add-ticket-form').dialog({
+            //    modal: true,
+            //    resizable: false,
+            //    width: 800,
+            //    height: 600,
+            //    buttons: [
+            //        {
+            //            text: 'Add',
+            //            click: function () {
+            //                console.info(app.ticketsList.collection);
+            //                app.ticketsList.collection.create(
+            //                    {title: $("#title").val(), text: $("#text").val(), status: 2},
+            //                    {wait: true}
+            //                );
+            //                $('#js-add-ticket-form').dialog('close');
+            //            }
+            //        },
+            //        {
+            //            text: 'Cancel',
+            //            click: function () {
+            //                $('#js-add-ticket-form').dialog('close');
+            //            }
+            //        }
+            //    ]
+            //});
         }
 
     });

@@ -3,13 +3,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title></title>
-    <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>
-    <script type="text/javascript" src="/js/ui/jquery-ui.js"></script>
-
-    <script type="text/javascript" src="/js/underscore.js"></script>
-    <script type="text/javascript" src="/js/backbone.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/js/handlebars.js"></script>
+<!--    <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>-->
+<!--    <script type="text/javascript" src="/js/ui/jquery-ui.js"></script>-->
+<!---->
+<!--    <script type="text/javascript" src="/js/underscore.js"></script>-->
+<!--    <script type="text/javascript" src="/js/backbone.js"></script>-->
+<!--    <script type="text/javascript" src="/js/bootstrap.js"></script>-->
+<!--    <script type="text/javascript" src="/js/handlebars.js"></script>-->
 
     <link type="text/css" rel="stylesheet" href="/css/ui_themes/base/jquery-ui.css"/>
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
@@ -104,14 +104,14 @@
 </script>
 
 
-<script type="text/javascript" src="/js/app/models/TicketModel.js"></script>
-<script type="text/javascript" src="/js/app/collections/TicketsCollection.js"></script>
-<script type="text/javascript" src="/js/app/views/TicketView.js"></script>
-<script type="text/javascript" src="/js/app/views/TicketsListView.js"></script>
-<script type="text/javascript" src="/js/app/views/TicketMainView.js"></script>
-<script type="text/javascript" src="/js/app/views/MainView.js"></script>
-<script type="text/javascript" src="/js/app/app.js"></script>
-<script data-main="js/app" src="js/require.js"></script>
+<!--<script type="text/javascript" src="/js/app/models/TicketModel.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/collections/TicketsCollection.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/views/TicketView.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/views/TicketsListView.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/views/TicketMainView.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/views/MainView.js"></script>-->
+<!--<script type="text/javascript" src="/js/app/app.js"></script>-->
+<script data-main="js/app/app.js" src="js/require.js"></script>
 
 <script type="text/javascript">
 
