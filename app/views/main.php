@@ -115,7 +115,7 @@
 
 <script type="text/javascript">
 
-    router.tickets.reset(<?php echo $tickets;?>);
+    window.ticketsLoad = <?php echo $tickets;?>);;
 </script>
 
 </body>

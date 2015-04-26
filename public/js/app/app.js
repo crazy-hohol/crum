@@ -54,6 +54,7 @@ require.config({
 });
 require(['backbone', 'jquery', 'router'], function(Backbone, $, Router) {
     var routerApp = new Router();
+    router.tickets.reset(ticketsLoad);
     $(document).ready(function() {
 
         Backbone.history.start();
