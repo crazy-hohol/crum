@@ -115,7 +115,7 @@
 
 <script type="text/javascript">
 
-    window.ticketsLoad = <?php echo $tickets;?>);;
+    window.ticketsLoad = <?php echo $tickets;?>;
 </script>
 
 </body>
