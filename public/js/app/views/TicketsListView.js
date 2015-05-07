@@ -6,7 +6,7 @@ define(
         var TicketsListView = Backbone.View.extend({
             //el: $("#status2"),
 
-            template: Handlebars.compile(templateList),
+            template: Handlebars.compile(qwe),
             initialize: function () {
                 this.$el.html(this.template());
                 var collection = this.collection;
