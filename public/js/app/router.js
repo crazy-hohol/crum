@@ -16,7 +16,7 @@ define(
 
             },
             showTicket: function(id) {
-
+console.info(this.collection);
                 var ticketView = new TicketMainView({model: this.tickets.get(id)});
                 this.mainView.subView = ticketView;
                 this.mainView.render();
