@@ -36,7 +36,7 @@ require.config({
         underscore: 'underscore',
         handlebars: 'handlebars',
         'jquery-ui': 'ui/jquery-ui',
-        router: '../app/router.js',
+        router: '../app/router',
         views: '../app/views',
         models: '../app/models',
         collections: '../app/collections',
