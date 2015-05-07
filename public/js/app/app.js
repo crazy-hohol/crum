@@ -31,6 +31,7 @@ require.config({
     baseUrl: 'js/lib',
     paths: {
         jquery: 'jquery-2.0.0',
+        text: 'text',
         backbone: 'backbone',
         underscore: 'underscore',
         handlebars: 'handlebars',
@@ -39,9 +40,7 @@ require.config({
         views: '../app/views',
         models: '../app/models',
         collections: '../app/collections',
-        templates: '../app/templates',
-        text: 'text'
-
+        templates: '../app/templates'
     },
     shim: {
         'handlebars': {
