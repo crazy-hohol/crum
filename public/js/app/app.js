@@ -52,7 +52,7 @@ require.config({
     }
 });
 require(['backbone', 'jquery', 'appRouter'], function(Backbone, $, Router) {
-
+console.info(Router);
     //routerApp.tickets.reset(ticketsLoad);
     $(document).ready(function() {
         var routerApp = new Router({res: ticketsLoad});
