@@ -36,7 +36,7 @@ require.config({
         underscore: 'underscore',
         handlebars: 'handlebars',
         'jquery-ui': 'ui/jquery-ui',
-        router: '../app/router',
+        appRouter: '../app/router',
         views: '../app/views',
         models: '../app/models',
         collections: '../app/collections',
@@ -51,7 +51,7 @@ require.config({
         }
     }
 });
-require(['backbone', 'jquery', 'router'], function(Backbone, $, Router) {
+require(['backbone', 'jquery', 'appRouter'], function(Backbone, $, Router) {
 
     //routerApp.tickets.reset(ticketsLoad);
     $(document).ready(function() {
