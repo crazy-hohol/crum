@@ -13,7 +13,7 @@ define(
         },
 
         addTicket: function() {
-            TicketAddView.collection.create(
+            this.collection.create(
                 {title: $("#title").val(), text: $("#text").val(), status: 2},
                 {wait: true}
             );
