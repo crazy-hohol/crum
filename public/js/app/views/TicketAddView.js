@@ -18,7 +18,7 @@ define(
                 {
                     wait: true,
                     success: function(response) {
-                        AppRouter.navigate('ticket/' + response.id, {trigger: true});
+                        routerApp.navigate('ticket/' + response.id, {trigger: true});
                     }
                 }
             );
