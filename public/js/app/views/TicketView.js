@@ -4,8 +4,7 @@ define(['backbone', 'handlebars', 'jquery', 'text!templates/TicketView.handlebar
 
         template: Handlebars.compile(template),
         render: function () {
-            var tmpl = _.template($("#ticketTemplate").html());
-            this.$el.html(tmpl(this.model.toJSON()));
+            this.$el.html(this.template(this.model.attributes));
             return this;
         }
     });
