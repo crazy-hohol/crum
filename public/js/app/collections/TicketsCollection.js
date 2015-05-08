@@ -1,8 +1,7 @@
-//var app = app || {};
 
-define(['backbone'], function(Backbone) {
+define(['backbone', 'models/TicketModel'], function(Backbone, TicketModel) {
     var TicketsCollection = Backbone.Collection.extend({
-        model:  app.TicketModel,
+        model:  TicketModel,
         url: '/ticket'
     });
 
