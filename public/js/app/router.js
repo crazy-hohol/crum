@@ -1,11 +1,12 @@
 define(
-    ['backbone', 'collections/TicketsCollection', 'views/MainView', 'views/TicketMainView', 'views/TicketsListView'],
-    function(Backbone, TicketsCollection, MainView, TicketMainView, TicketsListView) {
+    ['backbone', 'collections/TicketsCollection', 'views/MainView', 'views/TicketMainView', 'views/TicketsListView', 'views/TicketAddView'],
+    function(Backbone, TicketsCollection, MainView, TicketMainView, TicketsListView, TicketAddView) {
         var AppRouter = Backbone.Router.extend({
             routes: {
                 "ticket/:id": "showTicket",
                 "": "showMain",
-                "#": "showMain"
+                "#": "showMain",
+                "ticket-add": "ticketAdd"
             },
             initialize: function() {
                 this.tickets = new TicketsCollection();
@@ -22,6 +23,12 @@ define(
             showMain: function() {
                 var ticketsListView = new TicketsListView({collection: this.tickets});
                 this.mainView.subView = ticketsListView;
+                this.mainView.render();
+            },
+
+            ticketAdd: function() {
+                var ticketAddView = new TicketAddView();
+                this.mainView.subView = ticketAddView;
                 this.mainView.render();
             }
 
