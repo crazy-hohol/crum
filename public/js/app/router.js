@@ -10,8 +10,6 @@ define(
             initialize: function() {
 
                 this.tickets = new TicketsCollection();
-                console.info(this);
-                this.tickets.reset(this.res);
                 this.mainView = new MainView();
 
             },

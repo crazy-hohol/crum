@@ -55,7 +55,8 @@ require(['backbone', 'jquery', 'appRouter'], function(Backbone, $, AppRouter) {
 console.info(AppRouter);
     //routerApp.tickets.reset(ticketsLoad);
     $(document).ready(function() {
-        var routerApp = new AppRouter({res: ticketsLoad});
+        var routerApp = new AppRouter();
+        routerApp.tickets.reset(ticketsLoad);
         Backbone.history.start();
 
 
