@@ -8,6 +8,7 @@ define(
             "click #js-add-ticket": "addTicket"
         },
         render: function() {
+            this.$el.html(this.template);
             return this;
         },
 
