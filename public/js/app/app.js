@@ -56,7 +56,6 @@ console.info(AppRouter);
     //routerApp.tickets.reset(ticketsLoad);
     $(document).ready(function() {
         var routerApp = new AppRouter();
-        routerApp.tickets.reset(ticketsLoad);
         Backbone.history.start();
 
 
