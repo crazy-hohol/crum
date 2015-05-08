@@ -15,7 +15,12 @@ define(
         addTicket: function() {
             this.collection.create(
                 {title: $("#title").val(), text: $("#text").val(), status: 2},
-                {wait: true}
+                {
+                    wait: true,
+                    success: function(response) {
+                        AppRouter.navigate('ticket/' + response.id, {trigger: true});
+                    }
+                }
             );
         }
     });
