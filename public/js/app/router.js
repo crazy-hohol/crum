@@ -8,14 +8,12 @@ define(
                 "#": "showMain"
             },
             initialize: function() {
-
                 this.tickets = new TicketsCollection();
                 this.tickets.reset(ticketsLoad);
                 this.mainView = new MainView();
 
             },
             showTicket: function(id) {
-console.info(this.collection);
                 var ticketView = new TicketMainView({model: this.tickets.get(id)});
                 this.mainView.subView = ticketView;
                 this.mainView.render();
@@ -31,12 +29,3 @@ console.info(this.collection);
         return AppRouter;
     }
 );
-
-//
-//var router = new app.Router();
-//$(document).ready(function() {
-//
-//    Backbone.history.start();
-//
-//
-//});

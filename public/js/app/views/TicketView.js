@@ -1,4 +1,4 @@
-//var app = app || {};
+
 define(['backbone', 'handlebars', 'jquery', 'text!templates/TicketView.handlebars'], function(Backbone, Handlebars, $, template) {
     var TicketView = Backbone.View.extend({
 

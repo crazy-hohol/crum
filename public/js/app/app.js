@@ -1,31 +1,3 @@
-//var app = app || {};
-//
-//app.Router = Backbone.Router.extend({
-//    routes: {
-//        "ticket/:id": "showTicket",
-//        "": "showMain",
-//        "#": "showMain"
-//    },
-//    initialize: function() {
-//
-//        this.tickets = new app.TicketsCollection();
-//        this.mainView = new app.MainView();
-//
-//    },
-//    showTicket: function(id) {
-//
-//        var ticketView = new app.TicketMainView({model: this.tickets.get(id)});
-//        this.mainView.subView = ticketView;
-//        this.mainView.render();
-//    },
-//
-//    showMain: function() {
-//        var ticketsListView = new app.TicketsListView({collection: this.tickets});
-//        this.mainView.subView = ticketsListView;
-//        this.mainView.render();
-//    }
-//
-//});
 
 require.config({
     baseUrl: 'js/lib',
@@ -53,7 +25,6 @@ require.config({
 });
 require(['backbone', 'jquery', 'appRouter'], function(Backbone, $, AppRouter) {
 console.info(AppRouter);
-    //routerApp.tickets.reset(ticketsLoad);
     $(document).ready(function() {
         var routerApp = new AppRouter();
         Backbone.history.start();

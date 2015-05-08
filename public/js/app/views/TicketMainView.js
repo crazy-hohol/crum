@@ -1,4 +1,3 @@
-//var app = app || {};
 
 define(['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handlebars'], function(Backbone, $, Handlebars, template) {
     var TicketMainView = Backbone.View.extend({
@@ -35,8 +34,6 @@ define(['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handl
             var field = el.parent().prev().data('field');
             console.info(field);
             var value = el.prev().prev().val();
-            console.info(value);
-            //ticket.set(field, value);
             ticket.save(field, value, {
                 wait: true,
                 success: function (res) {

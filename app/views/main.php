@@ -3,13 +3,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title></title>
-<!--    <script type="text/javascript" src="/js/jquery-2.0.0.js"></script>-->
-<!--    <script type="text/javascript" src="/js/ui/jquery-ui.js"></script>-->
-<!---->
-<!--    <script type="text/javascript" src="/js/underscore.js"></script>-->
-<!--    <script type="text/javascript" src="/js/backbone.js"></script>-->
-<!--    <script type="text/javascript" src="/js/bootstrap.js"></script>-->
-<!--    <script type="text/javascript" src="/js/handlebars.js"></script>-->
 
     <link type="text/css" rel="stylesheet" href="/css/ui_themes/base/jquery-ui.css"/>
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>

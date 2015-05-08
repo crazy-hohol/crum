@@ -1,10 +1,9 @@
-//var app = app || {};
+
 define(
     ['handlebars', 'backbone', 'underscore', 'jquery', 'views/TicketView', 'text!templates/TicketsListView.handlebars'],
     function(Handlebars, Backbone, _, $, TicketView, templateList) {
 
         var TicketsListView = Backbone.View.extend({
-            //el: $("#status2"),
 
             template: Handlebars.compile(templateList),
             initialize: function () {
