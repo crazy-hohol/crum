@@ -27,7 +27,7 @@ define(
             },
 
             ticketAdd: function() {
-                var ticketAddView = new TicketAddView();
+                var ticketAddView = new TicketAddView({collection: this.tickets});
                 this.mainView.subView = ticketAddView;
                 this.mainView.render();
             }

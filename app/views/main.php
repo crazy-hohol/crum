@@ -17,7 +17,7 @@
     <div class="row-fluid show">
         <div class="span12 show" id="top">
             <div class="span-5">
-                <button id="js-add-ticket" class="btn btn-large btn-info" href="#ticket-add">New Ticket</button>
+                <a href="#ticket-add"><button id="js-add-ticket" class="btn btn-large btn-info">New Ticket</button></a>
                 <button class="btn btn-large btn-danger delete">New Category</button>
             </div>
             <div class="span-7"></div>
