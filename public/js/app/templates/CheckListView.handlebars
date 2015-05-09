@@ -1,0 +1,13 @@
+<div class="check-list">
+
+     {{#each List}}
+         <div>
+             <input id="{{id}}" type="checkbox" {{#if done}} checked {{/if}}><span {{#if done}}style="text-decoration: remove-all"{{/if}}>{{text}}</span>
+             <div>
+                 <img class="js-add-check-list-item" id="add_{{id}}" src=""/>
+                 <img class="js-edit-check-list-item" id="edit_{{id}}" src=""/>
+                 <img class="js-del-check-list-item" id="del_{{id}}" src=""/>
+             </div>
+         </div>
+     {{/each}}
+</div>
