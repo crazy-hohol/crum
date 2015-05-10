@@ -10,11 +10,11 @@ define(
             },
             initialize: function() {
                 this.model.on('change', function(task) {
-                    this.checkListConteiner.html(this.template(task.attributes));
+                    this.checkListConteiner.html(this.template(JSON.parse(task.get('checklist'))));
                 }, this);
             },
             render: function() {
-                this.checkListConteiner.html(this.template(this.model.attributes));
+                this.checkListConteiner.html(this.template(JSON.parse(this.model.get('checklist'))));
                 return this;
             },
 
