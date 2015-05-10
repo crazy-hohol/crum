@@ -36,10 +36,10 @@
             <button class="btn js-cancel-edition">Cancel</button>
         </div>
     </div>
-    <div>
-        {{#if !checkList }}
-            <button class="btn btn-info">Add checklist</button>
-        {{/if}}
+    {{#unless checklist }}
+        <button class="btn btn-info" id="js-add-checklist">Add checklist</button>
+    {{/unless}}
+    <div id="check-list-container">
     </div>
     <div></div>
 </div>

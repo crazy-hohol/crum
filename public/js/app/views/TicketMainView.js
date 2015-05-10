@@ -1,11 +1,14 @@
 
-define(['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handlebars'], function(Backbone, $, Handlebars, template) {
+define(
+    ['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handlebars', 'views/CheckListView'],
+    function(Backbone, $, Handlebars, template, CheckListView) {
     var TicketMainView = Backbone.View.extend({
         template: Handlebars.compile(template),
         events: {
             "click .js-edit-field-button": "editDialog",
             "click .js-save-field": "saveEditedField",
-            "click .js-cancel-edition": "cancelEditDialog"
+            "click .js-cancel-edition": "cancelEditDialog",
+            "click #js-add-checklist": "addCheckList"
         },
         initialize: function () {
             this.model.on('change', function(ticket) {
@@ -18,6 +21,11 @@ define(['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handl
         },
         render: function () {
             this.$el.html(this.template(this.model.attributes));
+            if (this.model.get('checklist')) {
+                var checklist = new CheckListView({model: this.model});
+                checklist.checkListConteiner = $("#check-list-container", this.$el);
+                checklist.render();
+            }
             return this;
         },
 
@@ -45,6 +53,12 @@ define(['backbone', 'jquery', 'handlebars', 'text!templates/TicketMainView.handl
         cancelEditDialog: function(el) {
             $(".edit-form").hide();
             $(el.target).prev().prev().prev().html('');
+        },
+
+        addCheckList: function(el) {
+            var checklist = new CheckListView({model: this.model});
+            checklist.checkListConteiner = $("#check-list-container", this.$el);
+            checklist.render();
         }
 
     });
