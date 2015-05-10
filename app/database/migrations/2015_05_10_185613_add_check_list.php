@@ -14,7 +14,7 @@ class AddCheckList extends Migration {
 	{
 		Schema::table('tickets', function(Blueprint $table)
 		{
-            $table->string('checklist', 100000)->default('');
+            $table->longText('checklist')->default('');
 		});
 	}
 
