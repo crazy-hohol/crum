@@ -1,6 +1,6 @@
 define(
-    ['backbone', 'jquery', 'handlebars', 'text!templates/CheckListView.handlebars'],
-    function(Backbone, $, Handlebars, template) {
+    ['backbone', 'jquery', 'handlebars', 'text!templates/CheckListView.handlebars', 'text!templates/CheckListEditView.handlebars'],
+    function(Backbone, $, Handlebars, template, templateEdit) {
         var CheckListView = Backbone.View.extend({
             template: Handlebars.compile(template),
             events: {
@@ -14,6 +14,9 @@ define(
                 }, this);
             },
             render: function() {
+                if (this.editMode) {
+                    this.template = Handlebars.compile(templateEdit);
+                }
                 this.checkListConteiner.html(this.template({List: JSON.parse(this.model.get('checklist'))}));
                 return this;
             },

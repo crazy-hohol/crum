@@ -58,6 +58,7 @@ define(
         addCheckList: function(el) {
             var checklist = new CheckListView({model: this.model});
             checklist.checkListConteiner = $("#check-list-container", this.$el);
+            checklist.editMode = true;
             checklist.render();
         }
 

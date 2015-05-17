@@ -85,4 +85,7 @@ img {
     margin-bottom: 3px;
 }
 
+.check-list-tools img {
+    cursor: pointer;
+}
 
