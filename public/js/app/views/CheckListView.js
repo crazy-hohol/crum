@@ -6,7 +6,9 @@ define(
             events: {
                 "click .js-edit-check-list-item": 'editCheckListItem',
                 "click .js-add-check-list-item": 'addCheckListItem',
-                "click .js-del-check-list-item": 'delCheckListItem'
+                "click .js-del-check-list-item": 'delCheckListItem',
+                "click #js-save-checklist": '',
+                "click #js-cancel-edition-checklist": ''
             },
             initialize: function() {
                 this.model.on('change', function(task) {
@@ -17,13 +19,10 @@ define(
                 if (this.editMode) {
                     this.template = Handlebars.compile(templateEdit);
                 }
-                this.checkListConteiner.html(this.template({List: JSON.parse(this.model.get('checklist'))}));
+                this.checkListConteiner.html(this.template({List: JSON.parse(this.model.get('checklist') || [])}));
                 return this;
             },
 
-            editCheckListItem: function() {
-
-            },
             addCheckListItem: function() {
 
             },
