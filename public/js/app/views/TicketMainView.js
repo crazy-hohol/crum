@@ -8,7 +8,8 @@ define(
             "click .js-edit-field-button": "editDialog",
             "click .js-save-field": "saveEditedField",
             "click .js-cancel-edition": "cancelEditDialog",
-            "click #js-add-checklist": "addCheckList"
+            "click #js-add-checklist": "addCheckList",
+            "click #js-edit-checklist": "addCheckList"
         },
         initialize: function () {
             this.model.on('change', function(ticket) {
