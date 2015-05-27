@@ -19,7 +19,8 @@ define(
                 if (this.editMode) {
                     this.template = Handlebars.compile(templateEdit);
                 }
-                this.checkListConteiner.html(this.template({List: JSON.parse(this.model.get('checklist') || [])}));
+                var data = this.model.get('checklist');
+                this.checkListConteiner.html(this.template(data ? {List: JSON.parse(data)} : {}));
                 return this;
             },
 
