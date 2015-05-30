@@ -90,3 +90,7 @@ img {
     margin-left: 7px;
 }
 
+.edit-item-input {
+    display: none;
+}
+

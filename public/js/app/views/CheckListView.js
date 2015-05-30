@@ -18,6 +18,7 @@ define(
             },
 
             initEditItem: function() {
+                console.info($(this).hide().next().val());
                 $(this).hide().next().show();
             }
         });
