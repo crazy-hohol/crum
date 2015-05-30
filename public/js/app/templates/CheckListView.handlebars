@@ -2,7 +2,7 @@
     {{#if List}}
         {{#each List}}
             <div class="list-item">
-                <input id="{{id}}" type="checkbox" {{#if done}} checked="checked" {{/if}}><label {{#if done}}style="text-decoration: remove-all"{{/if}}>{{text}}</label>
+                <input id="{{id}}" type="checkbox" {{#if done}} checked="checked" {{/if}} class="js-done-item"><label {{#if done}}style="text-decoration: remove-all"{{/if}}>{{text}}</label>
                 <a class="del"></a>
             </div>
             <input type="text" class="edit-item-input" value="{{text}}"/>
