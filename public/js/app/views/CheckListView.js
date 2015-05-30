@@ -1,6 +1,6 @@
 define(
     ['backbone', 'jquery', 'handlebars', 'text!templates/CheckListView.handlebars'],
-    function(Backbone, $, Handlebars, template, templateEdit) {
+    function(Backbone, $, Handlebars, template) {
         var CheckListView = Backbone.View.extend({
             template: Handlebars.compile(template),
             events: {
