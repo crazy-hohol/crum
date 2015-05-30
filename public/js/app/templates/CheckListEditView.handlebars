@@ -2,14 +2,14 @@
     {{#if List}}
         {{#each List}}
             <input type="text" value="{{text}}" id="text_{{id}}"/>
-            <div>
+            <div style="display: inline">
                 <img class="js-add-check-list-item" id="add_{{id}}" src="/images/add-icon.png"/>
                 <img class="js-del-check-list-item" id="del_{{id}}" src="/images/delete-icon.png"/>
             </div>
         {{/each}}
     {{else}}
         <input type="text" value="" id="text_0"/>
-        <div>
+        <div style="display: inline">
             <img class="js-add-check-list-item" id="add_0" src="/images/add-icon.png"/>
             <img class="js-del-check-list-item" id="del_0" src="/images/delete-icon.png"/>
         </div>

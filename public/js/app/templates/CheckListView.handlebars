@@ -1,8 +1,13 @@
 <div class="check-list">
-
-     {{#each List}}
-         <div>
-             <input id="{{id}}" type="checkbox" {{#if done}} checked {{/if}}><span {{#if done}}style="text-decoration: remove-all"{{/if}}>{{text}}</span>
-         </div>
-     {{/each}}
+    {{#if List}}
+        {{#each List}}
+            <div>
+                <input id="{{id}}" type="checkbox" {{#if done}} checked="checked" {{/if}}><label {{#if done}}style="text-decoration: remove-all"{{/if}}>{{text}}</label>
+                <a class="del"></a>
+            </div>
+            <input type="text" class="" value="{{text}}"/>
+        {{/each}}
+    {{else}}
+    <a class="add"></a><input type="text">
+    {{/if}}
 </div>
