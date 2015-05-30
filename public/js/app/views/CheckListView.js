@@ -4,11 +4,7 @@ define(
         var CheckListView = Backbone.View.extend({
             template: Handlebars.compile(template),
             events: {
-                "click .js-edit-check-list-item": 'editCheckListItem',
-                "click .js-add-check-list-item": 'addCheckListItem',
-                "click .js-del-check-list-item": 'delCheckListItem',
-                "click #js-save-checklist": '',
-                "click #js-cancel-edition-checklist": ''
+                "dblclick .list-item": 'initEditItem'
             },
             initialize: function() {
                 this.model.on('change', function(task) {
@@ -21,11 +17,8 @@ define(
                 return this;
             },
 
-            addCheckListItem: function() {
-
-            },
-            delCheckListItem: function() {
-
+            initEditItem: function() {
+                $(this).hide().next().show();
             }
         });
         return CheckListView;
