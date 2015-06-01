@@ -23,7 +23,7 @@ define(
             initEditItem: function(el) {
                 console.info(el.target);
                 $(el.target).hide().next().show();
-                $(el.target).next().show();
+                $(el.target).next().removeClass('edit-item-input').addClass('edit-item-input-editable');
             },
 
             done: function(el) {
