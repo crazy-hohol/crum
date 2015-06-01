@@ -24,7 +24,7 @@ define(
             this.$el.html(this.template(this.model.attributes));
             if (this.model.get('checklist')) {
                 var checklist = new CheckListView({model: this.model});
-                $("#check-list-container", this.$el).html(checklist.render().el)
+                $("#check-list-container").html(checklist.render().el)
 
             }
             return this;
