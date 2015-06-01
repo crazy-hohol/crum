@@ -3,7 +3,6 @@ define(
     function(Backbone, $, Handlebars, template) {
         var CheckListView = Backbone.View.extend({
 
-            el: '#check-list-container',
             template: Handlebars.compile(template),
             events: {
                 //"dblclick .list-item": 'initEditItem',
