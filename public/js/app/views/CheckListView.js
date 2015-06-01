@@ -17,6 +17,7 @@ define(
             render: function() {
                 var data = this.model.get('checklist');
                 this.$el.html(this.template(data ? {List: JSON.parse(data)} : {}));
+                this.delegateEvents();
                 return this;
             },
 
