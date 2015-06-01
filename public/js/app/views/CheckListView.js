@@ -7,8 +7,8 @@ define(
             events: {
                 "dblclick .list-item": 'initEditItem',
                 "click .js-done-item": 'done',
-                "keypress .edit-item-input": 'edit'
-
+                "keypress .edit-item-input": 'edit',
+                "keypress #add-checklist-item": "add"
             },
             initialize: function() {
                 this.model.on('change', function(task) {
@@ -28,7 +28,6 @@ define(
             },
 
             done: function(el) {
-
                 $(el.target).next().toggleClass('done');
             },
 
@@ -38,6 +37,14 @@ define(
                     this.model.editCheckListItem(input.data('id'), input.val());
                     input.hide().prev().show();
 
+                }
+            },
+
+            add: function(el) {
+                if (el.keyCode == 13) {
+                    var input = $(el.target);
+                    this.model.addCheckListItem(input.val())
+                    input.val('');
                 }
             }
 

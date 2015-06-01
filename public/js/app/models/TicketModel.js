@@ -2,8 +2,10 @@
 define(['backbone'], function(Backbone) {
     var TicketModel = Backbone.Model.extend({
         url: '/ticket',
-        addCheckListItem: function() {
-
+        addCheckListItem: function(val) {
+            var list = JSON.parse(this.get('checklist'));
+            list.push({id: list.length, text: val, done: 0});
+            this.save('checklist', JSON.stringify(list), {wait: true});
         },
         editCheckListItem: function(id, val) {
             var list = JSON.parse(this.get('checklist'));
