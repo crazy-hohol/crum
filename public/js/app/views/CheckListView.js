@@ -5,8 +5,9 @@ define(
 
             template: Handlebars.compile(template),
             events: {
-                "dblclick .list-item label": 'initEditItem',
-                "click .js-done-item": 'done'
+                "dblclick .list-item": 'initEditItem',
+                "click .js-done-item": 'done',
+                "keypress .edit-item-input": 'edit'
 
             },
             initialize: function() {
@@ -22,13 +23,22 @@ define(
 
             initEditItem: function(el) {
                 console.info(el.target);
-                $(el.target).hide().next().show();
-                $(el.target).parent().next().removeClass('edit-item-input').addClass('edit-item-input-editable');
+                $(el.target).hide();
+                $(el.target).parent().next().show();
             },
 
             done: function(el) {
 
                 $(el.target).next().toggleClass('done');
+            },
+
+            edit: function(el) {
+                if (e.keyCode == 13) {
+                    var input = $(el.target);
+                    this.model.editCheckListItem(input.data('id'), input.val());
+                    input.hide().prev().show();
+
+                }
             }
 
         });

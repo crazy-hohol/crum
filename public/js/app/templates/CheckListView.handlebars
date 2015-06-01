@@ -4,9 +4,9 @@
         {{#each List}}
             <div class="list-item">
                 <input id="{{id}}" type="checkbox" {{#if done}} checked="checked" {{/if}} class="js-done-item"><label {{#if done}}style="text-decoration: remove-all"{{/if}}>{{text}}</label>
-                <a class="del"></a>
+                <a class="del">del</a>
             </div>
-            <input type="text" class="edit-item-input" value="{{text}}"/>
+            <input type="text" class="edit-item-input" data-id="{{id}}" style="display: none;" value="{{text}}"/>
         {{/each}}
     {{/if}}
     <a class="add"></a><input type="text" placeholder="Add new list item">

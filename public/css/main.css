@@ -91,10 +91,7 @@ img {
 }
 
 .edit-item-input {
-    display: none !important;
-}
-.edit-item-input-editable {
-    display: block;
+
 }
 
 .done {
