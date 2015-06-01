@@ -28,7 +28,9 @@ define(
             },
 
             done: function(el) {
-                $(el.target).next().toggleClass('done');
+                var checkbox = $(el.target);
+                checkbox.next().toggleClass('done');
+                this.model.doneChecklistItem(checkbox.id());
             },
 
             edit: function(el) {
