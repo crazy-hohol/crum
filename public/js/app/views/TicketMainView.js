@@ -22,10 +22,10 @@ define(
         },
         render: function () {
             this.$el.html(this.template(this.model.attributes));
-            console.info(this.model.get('checklist'));
             if (this.model.get('checklist')) {
                 var checklist = new CheckListView({model: this.model});
-                $("#check-list-container", this.$el).html(checklist.render().$el);
+                $("#check-list-container", this.$el).html(checklist.$el);
+                checklist.render();
                 console.info($("#check-list-container", this.$el).html());
 
             }
