@@ -25,6 +25,7 @@ define(
             },
 
             done: function() {
+                console.info(this);
                 $(this).next().addClass('done');
             }
 
