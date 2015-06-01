@@ -22,6 +22,7 @@ define(
 
             initEditItem: function(el) {
                 $(el.target).hide().next().show();
+                $(el.target).next().show();
             },
 
             done: function(el) {
