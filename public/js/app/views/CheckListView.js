@@ -26,9 +26,9 @@ define(
                 $(this).hide().next().show();
             },
 
-            done: function() {
-                console.info(this);
-                $(this).next().addClass('done');
+            done: function(el) {
+
+                $(el.target).next().addClass('done');
             }
 
         });
