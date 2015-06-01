@@ -23,7 +23,7 @@ define(
 
             initEditItem: function(el) {
                 console.info(el.target);
-                $(el.target).hide();
+                $(el.target).parent().hide();
                 $(el.target).parent().next().show();
             },
 
@@ -33,7 +33,7 @@ define(
             },
 
             edit: function(el) {
-                if (e.keyCode == 13) {
+                if (el.keyCode == 13) {
                     var input = $(el.target);
                     this.model.editCheckListItem(input.data('id'), input.val());
                     input.hide().prev().show();
