@@ -6,7 +6,7 @@ define(
             template: Handlebars.compile(template),
             events: {
                 //"dblclick .list-item": 'initEditItem',
-                "click .list-item.js-done-item": 'done'
+                "click js-done-item": 'done'
 
             },
             initialize: function() {
