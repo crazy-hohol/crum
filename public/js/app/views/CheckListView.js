@@ -5,7 +5,7 @@ define(
 
             template: Handlebars.compile(template),
             events: {
-                "dblclick .list-item": 'initEditItem',
+                "dblclick .list-item label": 'initEditItem',
                 "click .js-done-item": 'done'
 
             },
@@ -21,6 +21,7 @@ define(
             },
 
             initEditItem: function(el) {
+                console.info(el.target);
                 $(el.target).hide().next().show();
                 $(el.target).next().show();
             },
