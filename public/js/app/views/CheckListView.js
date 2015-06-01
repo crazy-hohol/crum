@@ -5,25 +5,23 @@ define(
 
             template: Handlebars.compile(template),
             events: {
-                //"dblclick .list-item": 'initEditItem',
+                "dblclick .list-item": 'initEditItem',
                 "click .js-done-item": 'done'
 
             },
             initialize: function() {
-                //this.model.on('change', function(task) {
-                //    this.checkListConteiner.html(this.template({List: JSON.parse(task.get('checklist'))}));
-                //}, this);
+                this.model.on('change', function(task) {
+                    this.$el.html(this.template({List: JSON.parse(task.get('checklist'))}));
+                }, this);
             },
             render: function() {
                 var data = this.model.get('checklist');
                 this.$el.html(this.template(data ? {List: JSON.parse(data)} : {}));
                 this.delegateEvents();
-                //return this;
             },
 
-            initEditItem: function() {
-                console.info($(this).hide().next().val());
-                $(this).hide().next().show();
+            initEditItem: function(el) {
+                $(el.target).hide().next().show();
             },
 
             done: function(el) {

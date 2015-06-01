@@ -91,7 +91,7 @@ img {
 }
 
 .edit-item-input {
-    display: none;
+    display: none !important;
 }
 
 .done {
