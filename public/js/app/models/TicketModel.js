@@ -17,11 +17,11 @@ define(['backbone'], function(Backbone) {
             }
             this.save('checklist', JSON.stringify(list), {wait: true});
         },
-        doneChecklistItem: function(id) {
+        doneChecklistItem: function(id, flag) {
             var list = JSON.parse(this.get('checklist'));
             for (var i = 0; i < list.length; i++) {
                 if (list[i].id == id) {
-                    list[i].done = 1;
+                    list[i].done = flag;
                     break;
                 }
             }

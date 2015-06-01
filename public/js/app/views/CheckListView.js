@@ -30,7 +30,7 @@ define(
             done: function(el) {
                 var checkbox = $(el.target);
                 checkbox.next().toggleClass('done');
-                this.model.doneChecklistItem(checkbox.attr('id'));
+                this.model.doneChecklistItem(checkbox.attr('id'), checkbox.attr('checked') ? 1 : 0);
             },
 
             edit: function(el) {
