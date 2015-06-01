@@ -28,7 +28,7 @@ define(
 
             done: function(el) {
 
-                $(el.target).next().addClass('done');
+                $(el.target).next().toggleClass('done');
             }
 
         });
