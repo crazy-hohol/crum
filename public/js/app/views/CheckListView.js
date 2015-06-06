@@ -3,16 +3,7 @@ define(
     function(Backbone, $, Handlebars, template) {
         var CheckListView = Backbone.View.extend({
 
-            template: Handlebars.registerHelper('each', function(context, options) {
-                var ret = "";
-
-                for(var i=0, j=context.length; i<j; i++) {
-                    context[i].id = i
-                    ret = ret + options.fn(context[i]);
-                }
-
-                return ret;
-            }).compile(template),
+            //template: Handlebars.compile(template),
             events: {
                 "dblclick .list-item": 'initEditItem',
                 "click .js-done-item": 'done',
@@ -21,7 +12,17 @@ define(
                 "click .del": 'delete'
             },
             initialize: function() {
+                Handlebars.registerHelper('each', function(context, options) {
+                    var ret = "";
 
+                    for(var i=0, j=context.length; i<j; i++) {
+                        context[i].id = i
+                        ret = ret + options.fn(context[i]);
+                    }
+
+                    return ret;
+                });
+                this.template = Handlebars.compile(template);
                 this.model.on('change', function(task) {
                     this.$el.html(this.template({List: JSON.parse(task.get('checklist'))}));
                 }, this);
