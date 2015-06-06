@@ -31,7 +31,7 @@ define(['backbone'], function(Backbone) {
         },
         delCheckListItem: function(id) {
             var list = JSON.parse(this.get('checklist'));
-            delete list[id];
+            list.splice(id, 1);
             this.save('checklist', JSON.stringify(list), {wait: true});
         }
     });
