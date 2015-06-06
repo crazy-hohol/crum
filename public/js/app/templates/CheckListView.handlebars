@@ -4,7 +4,7 @@
         {{#each List}}
             <div class="list-item">
                 <input id="{{id}}" type="checkbox" {{#if done}} checked="checked" {{/if}} class="js-done-item"><label {{#if done}}class="done"{{/if}}>{{text}}</label>
-                <a class="del">del</a>
+                <a class="del" data-id="{{id}}" href="javascript:">del</a>
             </div>
             <input type="text" class="edit-item-input" data-id="{{id}}" style="display: none;" value="{{text}}"/>
         {{/each}}

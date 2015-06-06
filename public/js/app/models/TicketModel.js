@@ -27,8 +27,8 @@ define(['backbone'], function(Backbone) {
             }
             this.save('checklist', JSON.stringify(list), {wait: true});
         },
-        delCheckListItem: function() {
-
+        delCheckListItem: function(id) {
+            var list = JSON.parse(this.get('checklist'));
         }
     });
     return TicketModel;

@@ -3,14 +3,25 @@ define(
     function(Backbone, $, Handlebars, template) {
         var CheckListView = Backbone.View.extend({
 
-            template: Handlebars.compile(template),
+            template: Handlebars.registerHelper('each', function(context, options) {
+                var ret = "";
+
+                for(var i=0, j=context.length; i<j; i++) {
+                    context[i].id = i
+                    ret = ret + options.fn(context[i]);
+                }
+
+                return ret;
+            }).compile(template),
             events: {
                 "dblclick .list-item": 'initEditItem',
                 "click .js-done-item": 'done',
                 "keypress .edit-item-input": 'edit',
-                "keypress #add-checklist-item": "add"
+                "keypress #add-checklist-item": "add",
+                "click .del": 'delete'
             },
             initialize: function() {
+
                 this.model.on('change', function(task) {
                     this.$el.html(this.template({List: JSON.parse(task.get('checklist'))}));
                 }, this);
@@ -30,7 +41,7 @@ define(
             done: function(el) {
                 var checkbox = $(el.target);
                 checkbox.next().toggleClass('done');
-                this.model.doneChecklistItem(checkbox.attr('id'), checkbox.attr('checked') ? 1 : 0);
+                this.model.doneChecklistItem(checkbox.attr('id'), checkbox.prop('checked') ? 1 : 0);
             },
 
             edit: function(el) {
@@ -48,6 +59,11 @@ define(
                     this.model.addCheckListItem(input.val())
                     input.val('');
                 }
+            },
+
+            delete: function(el) {
+                var element = $(el.target);
+                this.model.delCheckListItem(element.data('id'));
             }
 
         });
