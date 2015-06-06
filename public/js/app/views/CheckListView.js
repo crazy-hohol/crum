@@ -15,7 +15,11 @@ define(
                 Handlebars.registerHelper('each', function(context, options) {
                     var ret = "";
 
-                    for(var i=0, j=context.length; i<j; i++) {
+                    //for(var i=0, j=context.length; i<j; i++) {
+                    //    context[i].id = i
+                    //    ret = ret + options.fn(context[i]);
+                    //}
+                    for (var i in context) {
                         context[i].id = i
                         ret = ret + options.fn(context[i]);
                     }
