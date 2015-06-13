@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration {
         });
 
         Schema::create('users_projects', function (Blueprint $table) {
-            $table->increment('id');
+            $table->increments('id');
             $table->integer('user_id')->insigned();
             $table->foreign('user_id')->references('id')->on('users');
 
