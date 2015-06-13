@@ -28,6 +28,7 @@
                         <!-- dropdown menu links -->
                     </ul>
                 </div>
+                <button class="btn btn-large btn-warning">Profile</button>
             </div>
             <div class="span-7"></div>
             <div class="row-fluid show" id="app">
