@@ -20,7 +20,7 @@
                 <a href="#ticket-add"><button id="js-add-ticket" class="btn btn-large btn-info">New Ticket</button></a>
                 <button class="btn btn-large btn-danger delete">New Category</button>
                 <div class="btn-group">
-                    <button class="btn">Project</button>
+                    <button class="btn btn-large btn-success">Project</button>
                     <button class="btn dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
