@@ -18,8 +18,6 @@ class CreateUsersTable extends Migration {
             $table->string('login', 50)->unique();
             $table->string('password', 200);
             $table->string('name', 200);
-            $table->integer('team_id')->unsigned();
-            $table->foreign('team_id')->references('id')->on('teams');
         });
 
         Schema::create('projects', function (Blueprint $table) {
@@ -29,7 +27,7 @@ class CreateUsersTable extends Migration {
             $table->string('who_add', 50);
         });
 
-        Sheme::create('users_projects', function (Blueprint $table) {
+        Schema::create('users_projects', function (Blueprint $table) {
             $table->increment('id');
             $table->integer('user_id')->insigned();
             $table->foreign('user_id')->references('id')->on('users');
