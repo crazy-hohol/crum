@@ -21,7 +21,7 @@
                 <button class="btn btn-large btn-danger delete">New Category</button>
                 <div class="btn-group">
                     <button class="btn btn-large btn-success">Project</button>
-                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <button class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
