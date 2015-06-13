@@ -30,16 +30,16 @@ class CreateUsersTable extends Migration {
         Schema::create('users_projects', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->insigned();
-            $table->foreign('user_id')->references('id')->on('users');
+//            $table->foreign('user_id')->references('id')->on('users');
 
             $table->integer('project_id')->insigned();
-            $table->foreign('project_id')->references('id')->on('projects');
+//            $table->foreign('project_id')->references('id')->on('projects');
         });
 
         Schema::table('tickets', function(Blueprint $table)
         {
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects');
+//            $table->foreign('project_id')->references('id')->on('projects');
         });
 	}
 
