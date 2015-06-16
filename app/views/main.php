@@ -16,34 +16,26 @@
 <div class="container-fluid" id="main">
     <div class="row-fluid show">
         <div class="span12 show" id="top">
-            <div class="span-5">
-                <a href="#ticket-add"><button id="js-add-ticket" class="btn btn-large btn-info">New Ticket</button></a>
-                <button class="btn btn-large btn-danger delete">New Category</button>
-                <div class="btn-group">
-                    <button class="btn btn-large btn-success">Project</button>
-                    <button class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <!-- dropdown menu links -->
-                    </ul>
-                </div>
-                <button class="btn btn-large btn-warning">Profile</button>
+            <a href="#ticket-add"><button id="js-add-ticket" class="btn btn-large btn-info">New Ticket</button></a>
+            <button class="btn btn-large btn-danger delete">New Story</button>
+            <div class="btn-group">
+                <button class="btn btn-large btn-success">Project</button>
+                <button class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <!-- dropdown menu links -->
+                </ul>
             </div>
-            <div class="span-7"></div>
-            <div class="row-fluid show" id="app">
-
-            </div>
+            <button class="btn btn-large btn-warning">Profile</button>
         </div>
+    </div>
+    <div class="row-fluid show" id="app">
+
     </div>
 </div>
 
 
-<div id="js-add-ticket-form" style="display: none;">
-    <label for="title">Заголовок</label><input type="text" id="title" />
-    <label for="story">Категория</label><select id="story"></select>
-    <label for="text">Текст</label><textarea id="text"></textarea>
-</div>
 <script data-main="js/app/app.js" src="js/lib/require.js"></script>
 
 <script type="text/javascript">
