@@ -1,5 +1,5 @@
 
-define(['backbone', 'jquery', 'views/MenuView'], function(Backbone, $, MenuView) {
+define(['backbone', 'jquery', 'views/MenuView', 'jquery-ui'], function(Backbone, $, MenuView) {
     var MainView = Backbone.View.extend({
         el: $("#main"),
         //events: {
