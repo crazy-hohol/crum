@@ -1,0 +1,14 @@
+<a href="#ticket-add"><button id="js-add-ticket" class="btn btn-large btn-info">New Task</button></a>
+<button class="btn btn-large btn-danger delete">New Story</button>
+<div class="btn-group">
+    <a href="#projects"><button class="btn btn-large btn-success">Project</button></a>
+    <button class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        {{#each projects}}
+            <li><a href="#project/{{id}}">{{name}}</a></li>
+        {{/each}}
+    </ul>
+</div>
+<button class="btn btn-large btn-warning">Profile</button>

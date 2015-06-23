@@ -1,48 +1,19 @@
-//var app = app || {};
-define(['backbone', 'jquery', 'jquery-ui'], function(Backbone, $) {
+
+define(['backbone', 'jquery', 'views/MenuView'], function(Backbone, $, MenuView) {
     var MainView = Backbone.View.extend({
         el: $("#main"),
-        events: {
-            "click #js-add-ticket": 'addTicket'
-
-        },
-        //initialize: function (options) {
+        //events: {
+        //    "click #js-add-ticket": 'addTicket'
         //
-        //    var coll = new app.TicketsCollection();
-        //    app.ticketsList = new app.TicketsListView({collection: coll}).render();
         //},
         render: function () {
 
             $("#app").html(this.subView.render().el);
+            if (this.menu) {
+                var menu = new MenuView();
+                $("#top").html(menu.render().el);
+            }
             return this;
-        },
-        addTicket: function() {
-            var self = this;
-            //$('#js-add-ticket-form').dialog({
-            //    modal: true,
-            //    resizable: false,
-            //    width: 800,
-            //    height: 600,
-            //    buttons: [
-            //        {
-            //            text: 'Add',
-            //            click: function () {
-            //                console.info(app.ticketsList.collection);
-            //                app.ticketsList.collection.create(
-            //                    {title: $("#title").val(), text: $("#text").val(), status: 2},
-            //                    {wait: true}
-            //                );
-            //                $('#js-add-ticket-form').dialog('close');
-            //            }
-            //        },
-            //        {
-            //            text: 'Cancel',
-            //            click: function () {
-            //                $('#js-add-ticket-form').dialog('close');
-            //            }
-            //        }
-            //    ]
-            //});
         }
 
     });

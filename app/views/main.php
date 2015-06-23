@@ -16,18 +16,7 @@
 <div class="container-fluid" id="main">
     <div class="row-fluid show">
         <div class="span12 show" id="top">
-            <a href="#ticket-add"><button id="js-add-ticket" class="btn btn-large btn-info">New Ticket</button></a>
-            <button class="btn btn-large btn-danger delete">New Story</button>
-            <div class="btn-group">
-                <button class="btn btn-large btn-success">Project</button>
-                <button class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <!-- dropdown menu links -->
-                </ul>
-            </div>
-            <button class="btn btn-large btn-warning">Profile</button>
+
         </div>
     </div>
     <div class="row-fluid show" id="app">
