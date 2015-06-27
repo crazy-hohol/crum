@@ -31,6 +31,19 @@
 
     window.ticketsLoad = <?php echo $tickets;?>;
 </script>
+<script type="text/template" id="js-registration-form">
+    <div class="span12" id="registration-form">
+        <form>
+            <label for="login">Login:</label><input type="text" name="login" id="login"/>
+            <label for="name">Name:</label><input type="text" name="name" id="name"/>
+            <label for="email">Email:</label><input type="text" name="email" id="email"/>
+            <label for="pass">Password:</label><input type="password" name="pass" id="pass"/>
+            <label for="pass_repeat">Repeat password:</label><input type="password" name="pass_repeat" id="pass_repeat"/>
+            <br/>
+            <input type="button" value="Register" id="register-btn" class="btn"/>
+        </form>
+    </div>
+</script>
 
 </body>
 </html>

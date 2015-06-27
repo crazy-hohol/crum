@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'crum',
 			'username'  => 'root',
-			'password'  => '64423kt',
+			'password'  => '3333',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

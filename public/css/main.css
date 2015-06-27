@@ -98,3 +98,9 @@ img {
     text-decoration: line-through;
 }
 
+#registration-form {
+    width: 400px;
+    margin: auto;
+    display: block;
+}
+

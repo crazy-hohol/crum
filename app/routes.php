@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::get('/', function() {
     $tickets = Ticket::all();
 	return View::make('main', ['tickets' => json_encode($tickets->toArray())]);
 });
 
 Route::controller('ticket', 'TicketController');
+Route::controller('project', 'ProjectController');
+Route::post('/registration-user', function() {
+    $ticket = User::create(Input::all());
+});

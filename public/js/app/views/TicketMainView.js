@@ -25,8 +25,6 @@ define(
                 var checklist = new CheckListView({model: this.model});
                 $("#check-list-container", this.$el).html(checklist.$el);
                 checklist.render();
-                console.info($("#check-list-container", this.$el).html());
-
             }
             return this;
         },

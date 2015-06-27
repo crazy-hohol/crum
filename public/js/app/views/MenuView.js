@@ -4,7 +4,7 @@ define(
         var menuView = Backbone.View.extend({
             template: Handlebars.compile(template),
             render: function() {
-                this.$el.html(this.template(this.re));
+                this.$el.html(this.template);
                 return this;
             }
         });
