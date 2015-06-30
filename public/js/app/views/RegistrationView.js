@@ -2,6 +2,7 @@ define(
     ['jquery', 'backbone', 'models/UserRegistrationModel'],
     function($, Backbone, UserRegistrationModel) {
         var RegistrationView = Backbone.View.extend({
+            className: 'span2 offset6',
             events: {
                 "click #register-btn": 'registerUser'
             },

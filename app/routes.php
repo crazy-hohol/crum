@@ -19,5 +19,5 @@ Route::get('/', function() {
 Route::controller('ticket', 'TicketController');
 Route::controller('project', 'ProjectController');
 Route::post('/registration-user', function() {
-    $ticket = User::create(Input::all());
+    $ticket = User::fill(Input::all());
 });
