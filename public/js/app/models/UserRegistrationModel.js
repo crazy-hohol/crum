@@ -5,7 +5,7 @@ define(['backbone'], function(Backbone) {
             if (attrs.pass != attrs.pass_repeat) {
                 return 'pass not identical';
             }
-            if (!attrs.email.test('/^[0-9a-zA-Z.-_]+@[0-9a-zA-Z.-_]+\.[0-9a-zA-Z.-_]+/')) {
+            if (!attrs.email.match(/^[0-9a-zA-Z.-_]+@[0-9a-zA-Z.-_]+\.[0-9a-zA-Z.-_]+/)) {
                 return 'invalid email';
             }
             if (attrs.login.length < 6) {

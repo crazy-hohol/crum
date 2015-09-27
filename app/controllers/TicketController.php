@@ -8,6 +8,13 @@
 
 class TicketController extends BaseController
 {
+    public function __construct()
+    {
+        $this->beforeFilter('auth.basic');
+
+    }
+
+
     public function postIndex()
     {
         $ticket = Ticket::create(Input::all());

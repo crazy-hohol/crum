@@ -24,6 +24,7 @@ require.config({
     }
 });
 require(['backbone', 'jquery', 'appRouter'], function(Backbone, $, AppRouter) {
+    $.ajaxSetup({})
     routerApp = new AppRouter();
     $(document).ready(function() {
         Backbone.history.start();

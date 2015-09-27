@@ -17,7 +17,7 @@ define(
                 "ticket-add": "ticketAdd",
                 "projects": "",
                 "project/:id": "",
-                "log-in": "",
+                "log-in": "auth",
                 "log-out": "",
                 "registration": "registerUser"
             },
@@ -52,6 +52,9 @@ define(
                 this.mainView.subView = registrationView;
                 this.mainView.menu = false;
                 this.mainView.render();
+            },
+            auth: function() {
+
             }
 
         });
