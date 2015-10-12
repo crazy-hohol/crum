@@ -23,8 +23,28 @@ require.config({
         }
     }
 });
-require(['backbone', 'jquery', 'appRouter'], function(Backbone, $, AppRouter) {
-    $.ajaxSetup({})
+require(['backbone', 'jquery', 'underscore', 'appRouter'], function(Backbone, $, _, AppRouter) {
+    $.ajaxSetup({
+        statusCode: {
+            401: function () {
+                window.location.replace('#log-in');
+            }
+        },
+        headers: {
+            'PHP_AUTH_USER': sessionStorage.getItem('auth_token')
+        }
+    });
+    //var _sync = Backbone.sync();
+    //Backbone.sync = function (method, model, options) {
+    //    if (model && (method == 'create' || method == 'update' || method == 'patch')) {
+    //        options.contentType = 'application/json';
+    //        options.data = JSON.stringify(options.attrs || model.toJSON());
+    //    }
+    //    _.extend(options.data, {
+    //        'auth_token' : ''
+    //    });
+    //    return _sync.call(this, method, model, options);
+    //};
     routerApp = new AppRouter();
     $(document).ready(function() {
         Backbone.history.start();

@@ -6,9 +6,13 @@ define(
         'views/TicketMainView',
         'views/TicketsListView',
         'views/TicketAddView',
-        'views/RegistrationView'
+        'views/RegistrationView',
+        'views/AuthView',
+        'models/SessionModel'
     ],
-    function(Backbone, TicketsCollection, MainView, TicketMainView, TicketsListView, TicketAddView, RegistrationView) {
+    function(
+        Backbone, TicketsCollection, MainView, TicketMainView, TicketsListView, TicketAddView, RegistrationView, AuthView, SessionModel
+    ) {
         var AppRouter = Backbone.Router.extend({
             routes: {
                 "ticket/:id": "showTicket",
@@ -25,7 +29,7 @@ define(
                 this.tickets = new TicketsCollection();
                 this.tickets.reset(ticketsLoad);
                 this.mainView = new MainView();
-
+                this.sessionModel = new SessionModel();
             },
             showTicket: function(id) {
                 var ticketView = new TicketMainView({model: this.tickets.get(id)});
@@ -54,7 +58,10 @@ define(
                 this.mainView.render();
             },
             auth: function() {
-
+                var authView = new AuthView({model: this.sessionModel});
+                this.mainView.subView = authView;
+                this.mainView.menu = false;
+                this.mainView.render();
             }
 
         });

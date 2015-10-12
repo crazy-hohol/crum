@@ -1,7 +1,7 @@
 define(
     ['backbone', 'jquery'],
     function(Backbone, $) {
-        var view = Backbone.View.extend({
+        var AuthView = Backbone.View.extend({
             className: "span2 offset6",
             template: $("#js-login-form").html(),
             events: {
@@ -12,9 +12,13 @@ define(
                 return this;
             },
             logInAction: function (el) {
-
+                var authData = {
+                    login: $("#auth-login").val(),
+                    password: $("#auth-pass").val()
+                };
+                this.model.login(authData);
             }
         });
-        return view;
+        return AuthView;
     }
 );

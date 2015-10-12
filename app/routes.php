@@ -21,8 +21,8 @@ Route::controller('project', 'ProjectController');
 Route::post('/registration-user', function() {
     $data = Input::all();
     $data['password'] = Hash::make($data['pass']);
-    $ticket = User::create($data);
-    return Response::json($ticket->id);
+    $user = User::create($data);
+    return Response::json($user->id);
 });
 Route::post('/sign-in', function() {
     $data = Input::all();
@@ -32,7 +32,24 @@ Route::post('/sign-in', function() {
         $user->auth_token = $token;
         $user->save();
         return Response::json(
-            ['token' => $token] + (array)Auth::user()
+            [
+                'status' => 'success',
+                'data' => [
+                    'token' => $token,
+                    'user' => Auth::user()->toArray()
+                ]
+            ]
         );
     }
+});
+
+Route::delete('/sign-out', function() {
+    $user = User::find(Auth::id());
+    $user->auth_token = null;
+    $user->save();
+    return Response::json(
+        [
+            'status' => 'success'
+        ]
+    );
 });

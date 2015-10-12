@@ -51,7 +51,7 @@ Route::filter('auth', function()
 
 Route::filter('auth.basic.once', function()
 {
-	return Auth::onceBasic();
+	return Auth::onceBasic('auth_token');
 });
 
 Route::filter('auth.basic', function()
