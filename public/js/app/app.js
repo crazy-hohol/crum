@@ -31,7 +31,7 @@ require(['backbone', 'jquery', 'underscore', 'appRouter'], function(Backbone, $,
             }
         },
         headers: {
-            'PHP_AUTH_USER': sessionStorage.getItem('auth_token')
+            'Authorization': sessionStorage.getItem('auth_token')
         }
     });
     //var _sync = Backbone.sync();

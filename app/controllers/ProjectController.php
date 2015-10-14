@@ -9,6 +9,11 @@
 
 class ProjectController extends BaseController
 {
+    public function __construct()
+    {
+        $this->beforeFilter('token_auth');
+    }
+
     public function getIndex()
     {
         if ($id = Input::get('id')) {

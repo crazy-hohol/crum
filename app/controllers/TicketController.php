@@ -10,8 +10,7 @@ class TicketController extends BaseController
 {
     public function __construct()
     {
-        $this->beforeFilter('auth.basic.once');
-
+        $this->beforeFilter('token_auth');
     }
 
 
