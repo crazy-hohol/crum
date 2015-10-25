@@ -6,10 +6,12 @@
  * Time: 16:54
  */
 
-namespace app\models;
-
 
 class Project extends Eloquent
 {
+    protected $guardet = ['id'];
 
+    protected $fillable  = [
+        'title', 'text', 'status', 'story'
+    ];
 }

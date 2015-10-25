@@ -74,8 +74,7 @@
         </div>
         <div class="control-group">
             <div class="controls">
-                <a href="#registration"><input type="button" value="Register"/></a>
-                <input type="button" value="Log-in" id="log"/>
+                <a href="#registration"><input type="button" class="btn" value="Register"/></a> <input type="button" class="btn" value="Log-in" id="log"/>
             </div>
         </div>
     </form>
