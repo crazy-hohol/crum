@@ -16,15 +16,22 @@ class ProjectController extends BaseController
 
     public function getIndex()
     {
+//        die(var_dump(Auth::id()));
         if ($id = Input::get('id')) {
-            $ticket = Project::find($id);
-            if (!$ticket) {
+            $project = Project::find($id);
+            if (!$project) {
                 return Response::json([]);
             }
-            return Response::json($ticket->toArray());
+            return Response::json($project->toArray());
         } else {
-            $tickets = Project::all();
-            return Response::json($tickets->toArray());
+            $projects = Project::all();
+            return Response::json($projects->toArray());
         }
+    }
+
+
+    public function postIndex()
+    {
+
     }
 }

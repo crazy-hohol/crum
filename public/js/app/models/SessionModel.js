@@ -26,8 +26,19 @@ define(
                     data: authData
                 }).done(function (response) {
                     if (response.status == 'success') {
+                        that.unset('auth_token');
                         that.set('auth_token', response.data.token);
                         that.set('user', response.data.user);
+                        $.ajaxSetup({
+                            statusCode: {
+                                401: function () {
+                                    window.location.replace('#log-in');
+                                }
+                            },
+                            headers: {
+                                'Authorization': that.get('auth_token')
+                            }
+                        });
                         if (that.get('redirectFrom')) {
                             Backbone.history.navigate(
                                 that.get('redirectFrom'),

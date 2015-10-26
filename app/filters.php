@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 App::before(function($request)
 {
 	//
@@ -35,13 +37,17 @@ App::after(function($request, $response)
 
 Route::filter('token_auth', function () {
     $token = Request::header('Authorization');
-	if (!$token) {
+	if (!$token || $token == 'null') {
 		return Response::make('Unauthorized', 401);
 	}
-	$user = User::where('auth_token', $token)->firstOrFail();
-	if (!$user) {
-		return Response::make('Unauthorized', 401);
-	}
+    try {
+        $user = User::where('auth_token', $token)->firstOrFail();
+    } catch (ModelNotFoundException $e) {
+        return Response::make('Unauthorized', 401);
+    } catch (\Exception $e) {
+        return $e->getMessage() . '\n' . $e->getFile() . ' - ' . $e->getLine();
+    }
+
 });
 
 
