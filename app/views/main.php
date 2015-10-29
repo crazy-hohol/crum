@@ -28,8 +28,8 @@
 <script data-main="js/app/app.js" src="js/lib/require.js"></script>
 
 <script type="text/javascript">
-
-    window.ticketsLoad = <?php echo $tickets;?>;
+    window.ticketsLoad = <?php echo $tickets ?: 'null';?>;
+    window.projectsLoad = <?php echo $projects ?: 'null';?>;
 </script>
 <script type="text/template" id="js-registration-form">
     <div id="registration-form">

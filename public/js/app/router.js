@@ -39,10 +39,17 @@ define(
             },
             initialize: function() {
                 this.tickets = new TicketsCollection();
-                this.tickets.reset(ticketsLoad);
+                this.projectsCollection = new ProjectsCollection();
+                if (projectsLoad && ticketsLoad) {
+                    this.projectsCollection.reset(projectsLoad);
+                    this.tickets.reset(ticketsLoad);
+                } else {
+                    this.projectsCollection.fetch();
+                    this.tickets.fetch();
+                }
+
                 this.mainView = new MainView();
                 this.sessionModel = new SessionModel();
-                this.projectsCollection = new ProjectsCollection();
             },
             showTicket: function(id) {
                 var ticketView = new TicketMainView({model: this.tickets.get(id)});

@@ -6,23 +6,18 @@ define(
             events: {
 
             },
-            //initialize: function() {
-            //
-            //},
-            render: function() {
-                var that = this;
+            initialize: function() {
                 this.collection.fetch({
-                    reset: true,
-                    success: function (reponse) {
-                        var p = [];
-                        for (var i in reponse.models) {
-                            var model = reponse.models[i];
-                            p.push({id: model.get('id'), name: model.get('name')});
-                        }
-                        that.$el.html(that.template({Projects: p}));
-                    }
+                    reset: true
                 });
-
+            },
+            render: function() {
+                var p = [];
+                for (var i in this.collection.models) {
+                    var model = this.collection.models[i];
+                    p.push({id: model.get('id'), name: model.get('name')});
+                }
+                this.$el.html(that.template({Projects: p}));
                 console.info(this.collection.models);
 
                 return this;

@@ -15,7 +15,7 @@ Route::get('/', function() {
 
     if (Auth::check()) {
         $user = User::find(Auth::id());
-
+//die(var_dump(Auth::id()));
         $projects = $user->projects;
         $tickets = [];
         foreach ($projects as $project) {
@@ -26,9 +26,12 @@ Route::get('/', function() {
             [
                 'tickets' => json_encode($tickets),
                 'projects' => json_encode($projects->toArray()),
-                'user' => $user->toArray(),
+                'user' => json_encode($user->toArray()),
             ]
         );
+    } else {
+        return View::make('main', ['tickets' => '', 'projects' => '']);
+
     }
 
 });
