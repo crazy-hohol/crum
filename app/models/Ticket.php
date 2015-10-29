@@ -13,4 +13,10 @@ class Ticket extends Eloquent
     protected $fillable  = [
         'title', 'text', 'status', 'story'
     ];
+
+
+    public function project()
+    {
+        return $this->belongsTo('Project');
+    }
 } 

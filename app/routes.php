@@ -12,8 +12,25 @@
 */
 
 Route::get('/', function() {
-    $tickets = Ticket::all();
-	return View::make('main', ['tickets' => json_encode($tickets->toArray())]);
+
+    if (Auth::check()) {
+        $user = User::find(Auth::id());
+
+        $projects = $user->projects;
+        $tickets = [];
+        foreach ($projects as $project) {
+            $tickets = array_merge($tickets, $project->tasks->toArray());
+        }
+        return View::make(
+            'main',
+            [
+                'tickets' => json_encode($tickets),
+                'projects' => json_encode($projects->toArray()),
+                'user' => $user->toArray(),
+            ]
+        );
+    }
+
 });
 
 Route::controller('ticket', 'TicketController');

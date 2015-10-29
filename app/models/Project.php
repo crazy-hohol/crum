@@ -14,4 +14,16 @@ class Project extends Eloquent
     protected $fillable  = [
         'title', 'text', 'status', 'story'
     ];
+
+
+    public function users()
+    {
+        return $this->belongsToMany('Users', 'users_projects');
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany('Ticket');
+    }
+
 }

@@ -6,21 +6,25 @@ define(
             events: {
 
             },
-            initialize: function() {
-                this.collection.fetch({reset: true});
-                //Handlebars.registerHelper('each', function(context, options) {
-                //    var ret = "";
-                //    for (var i in context) {
-                //        context[i].id = i
-                //        ret = ret + options.fn(context[i]);
-                //    }
-                //
-                //    return ret;
-                //});
-            },
+            //initialize: function() {
+            //
+            //},
             render: function() {
-                console.info(this.collection.model);
-                this.$el.html(this.template({Projects: this.collection.models}));
+                var that = this;
+                this.collection.fetch({
+                    reset: true,
+                    success: function (reponse) {
+                        var p = [];
+                        for (var i in reponse.models) {
+                            var model = reponse.models[i];
+                            p.push({id: model.get('id'), name: model.get('name')});
+                        }
+                        that.$el.html(that.template({Projects: p}));
+                    }
+                });
+
+                console.info(this.collection.models);
+
                 return this;
             }
         });
