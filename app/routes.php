@@ -48,14 +48,19 @@ Route::post('/sign-in', function() {
     $data = Input::all();
     if (Auth::attempt(['login' => $data['login'], 'password' => $data['password']])) {
         $token = hash('sha256', Str::random(10), false);
+        $dateFor = new \DateTime();
+        $dateFor->modify('+6 day');
         $user = User::find(Auth::id());
-        $user->auth_token = $token;
-        $user->save();
+        if (!$user->auth_token || (new \DateTime())->format('Y-m-d') > $user->auth_token_expire) {
+            $user->auth_token = $token;
+            $user->auth_token_expire = $dateFor->format('Y-m-d');
+            $user->save();
+        }
         return Response::json(
             [
                 'status' => 'success',
                 'data' => [
-                    'token' => $token,
+                    'token' => $user->auth_token,
                     'user' => Auth::user()->toArray()
                 ]
             ]

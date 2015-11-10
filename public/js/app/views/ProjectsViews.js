@@ -7,9 +7,18 @@ define(
 
             },
             initialize: function() {
-                this.collection.fetch({
-                    reset: true
+                var that = this;
+                this.collection.on('change', function(project) {
+                    var p = [];
+                    p.push({id: project.get('id'), name: project.get('name')});
+                    that.$el.html(that.template({Projects: p}));
                 });
+                this.collection.on('add', function(project) {
+                    var p = [];
+                    p.push({id: project.get('id'), name: project.get('name')});
+                    that.$el.html(that.template({Projects: p}));
+                });
+                this.collection.fetch();
             },
             render: function() {
                 var p = [];
@@ -17,7 +26,7 @@ define(
                     var model = this.collection.models[i];
                     p.push({id: model.get('id'), name: model.get('name')});
                 }
-                this.$el.html(that.template({Projects: p}));
+                this.$el.html(this.template({Projects: p}));
                 console.info(this.collection.models);
 
                 return this;
