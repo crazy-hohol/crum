@@ -11,6 +11,7 @@ define(['backbone', 'jquery', 'views/MenuView', 'jquery-ui'], function(Backbone,
             $("#app").html(this.subView.render().el);
             if (this.menu) {
                 var menu = new MenuView();
+                menu.projects = this.projects;
                 $("#top").html(menu.render().$el);
             }
             return this;

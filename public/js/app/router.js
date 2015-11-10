@@ -49,6 +49,7 @@ define(
                 }
 
                 this.mainView = new MainView();
+                this.mainView.projects = this.projectsCollection;
                 this.sessionModel = new SessionModel();
             },
             showTicket: function(id) {
