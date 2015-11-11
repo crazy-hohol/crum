@@ -24,7 +24,8 @@ class ProjectController extends BaseController
             }
             return Response::json($project->toArray());
         } else {
-            $projects = Project::all();
+            $user = User::find(Auth::id());
+            $projects = $user->projects;
             return Response::json($projects->toArray());
         }
     }

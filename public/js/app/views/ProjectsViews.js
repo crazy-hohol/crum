@@ -8,15 +8,11 @@ define(
             },
             initialize: function() {
                 var that = this;
-                this.collection.on('change', function(project) {
-                    var p = [];
-                    p.push({id: project.get('id'), name: project.get('name')});
-                    that.$el.html(that.template({Projects: p}));
+                this.collection.on('change', function() {
+                    that.render();
                 });
                 this.collection.on('add', function(project) {
-                    var p = [];
-                    p.push({id: project.get('id'), name: project.get('name')});
-                    that.$el.html(that.template({Projects: p}));
+                    that.render();
                 });
                 this.collection.fetch();
             },
